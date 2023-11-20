@@ -11,6 +11,8 @@ All you need to change is probably here, style.css is only for WordPress to get 
 
 
 .hero-text{
-    @apply text-lg font-bold text-gray-900;
-    background-color:black!important;
+    @apply text-[8rem] font-bold text-gray-900 py-[200px] text-center;
+}
+body{
+    min-height: 99vh;
 }
