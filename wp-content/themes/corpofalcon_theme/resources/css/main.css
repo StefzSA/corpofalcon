@@ -4,7 +4,13 @@ All you need to change is probably here, style.css is only for WordPress to get 
 
 */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 
 .hero-text{
     @apply text-lg font-bold text-gray-900;
+    background-color:black!important;
 }

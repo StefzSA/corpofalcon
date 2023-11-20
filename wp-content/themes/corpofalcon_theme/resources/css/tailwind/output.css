@@ -1,5 +1,12 @@
 /*
+Here goes all the css applied throughout all templates.
+All you need to change is probably here, style.css is only for WordPress to get theme information.
+
+*/
+
+/*
 ! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
+
 */
 
 /*
@@ -537,4 +544,13 @@ video {
 .px-\[390px\] {
   padding-left: 390px;
   padding-right: 390px;
+}
+
+.hero-text {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+  background-color:black!important;
 }
