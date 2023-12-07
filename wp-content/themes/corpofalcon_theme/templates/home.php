@@ -13,7 +13,7 @@ get_header();
         </div>
         <div class="columns container w-full mx-auto relative z-auto h-full">
             <div class="flex flex-wrap w-full h-full items-center">
-                <div class="left w-8/12">
+                <div class="left w-full md:w-8/12">
                     <div class="title w-full">
                         <h1>Impulsando el desarrollo de Falcón</h1>
                     </div>
