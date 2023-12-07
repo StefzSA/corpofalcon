@@ -23,7 +23,7 @@ All you need to change is probably here, style.css is only for WordPress to get 
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e5e7eb;
+  border-color: currentColor;
   /* 2 */
 }
 
@@ -541,16 +541,314 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.hero-text {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  text-align: center;
-  font-size: 8rem;
-  font-weight: 700;
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
+.container {
+  width: 100%;
 }
 
-body{
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-auto {
+  z-index: auto;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-8\/12 {
+  width: 66.666667%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+/***************** GENERAL *****************/
+
+body,
+main {
+  font-family: "Poppins", sans-serif;
   min-height: 99vh;
+}
+
+main {
+  margin-top: 93px;
+}
+
+/***************** GENERAL *****************/
+
+/***************** HEADER *****************/
+
+#header {
+  background: rgb(255, 255, 255);
+  position: absolute;
+  top: 0;
+  .nav {
+    display: flex;
+  }
+  .nav {
+    width: 100%;
+  }
+  .nav {
+    flex-wrap: wrap;
+  }
+  .nav {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  @media (min-width: 1280px) {
+    .nav {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+  }
+  .logo {
+    background-image: url(http://localhost/corpofalcon/wp-content/uploads/2023/12/Remove-bg.ai_1701878435680.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+  }
+  .logo_wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .logo_wrapper a {
+    width: 80%;
+    height: 100%;
+    min-height: 85px;
+  }
+}
+
+/***************** GENERAL *****************/
+
+/***************** COMPONENTS *****************/
+
+/***************** COMPONENTS *****************/
+
+/***************** HOME *****************/
+
+#home {
+  /****** VAR DEFINITION ******/
+  --height-hero: 900px;
+  /****** VAR DEFINITION ******/
+  #hero-section.img-bg {
+    position: relative;
+    background-image: url(http://localhost/corpofalcon/wp-content/uploads/2023/12/medanos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    width: 100%;
+    height: 100%;
+    height: var(--height-hero);
+  }
+  #hero-section.img-bg:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: 1;
+  }
+  #hero-section.img-bg:before {
+    --tw-bg-opacity: 1;
+    background-color: rgb(83 83 83 / var(--tw-bg-opacity));
+  }
+  #hero-section {
+    overflow: hidden;
+    >.overlay {
+      z-index: 1;
+      height: var(--height-hero);
+      position: absolute;
+      width: 100%;
+      .mask {
+        transform: translateY(60%);
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        height: var(--height-hero);
+        -webkit-mask-image: url(http://localhost/corpofalcon/wp-content/uploads/2023/12/triangle-shape.svg);
+                mask-image: url(http://localhost/corpofalcon/wp-content/uploads/2023/12/triangle-shape.svg);
+        -webkit-mask-size: cover;
+                mask-size: cover;
+      }
+      .mask {
+        --tw-bg-opacity: 1;
+        background-color: rgb(69 136 246 / var(--tw-bg-opacity));
+      }
+      .mask {
+        right:0;
+      }
+    }
+    .columns {
+      z-index: 1;
+      height: var(--height-hero);
+    }
+    .left {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      .title {
+        font-size: 6rem;
+      }
+      .title {
+        font-weight: 700;
+      }
+      .title {
+        --tw-text-opacity: 1;
+        color: rgb(115 200 36 / var(--tw-text-opacity));
+      }
+      .description {
+        font-size: 1.5rem;
+      }
+      .description {
+        width: 83.333333%;
+      }
+      .description {
+        --tw-text-opacity: 1;
+        color: rgb(221 221 221 / var(--tw-text-opacity));
+      }
+      .cta {
+        > button {
+          position: relative;
+          padding: 10px 15px;
+          height: 50px;
+          min-width: 100px;
+          border: 3px 0px 3px 0px solid;
+          transition: 0.4s all ease-in-out;
+          font-weight: 600;
+        }
+        > button {
+          --tw-border-opacity: 1;
+          border-color: rgb(69 136 246 / var(--tw-border-opacity));
+        }
+        > button {
+          --tw-bg-opacity: 1;
+          background-color: rgb(69 136 246 / var(--tw-bg-opacity));
+        }
+        > button {
+          --tw-text-opacity: 1;
+          color: rgb(221 221 221 / var(--tw-text-opacity));
+        }
+        > button:hover {
+          transform: translateY(-5px);
+        }
+        > button:hover {
+          --tw-bg-opacity: 1;
+          background-color: rgb(69 136 246 / var(--tw-bg-opacity));
+        }
+        > button:hover {
+          --tw-text-opacity: 1;
+          color: rgb(221 221 221 / var(--tw-text-opacity));
+        }
+        > button::after {
+          position: absolute;
+          content: "";
+          width: 0%;
+          height: 4px;
+          left: 50%;
+          bottom: -1px;
+          z-index: 99;
+          bottom: 0;
+          transition: 0.5s all ease-in-out;
+        }
+        > button::after {
+          --tw-bg-opacity: 1;
+          background-color: rgb(115 200 36 / var(--tw-bg-opacity));
+        }
+        > button:hover::after {
+          bottom: -1px;
+          width: 100%;
+          left: 0%;
+          z-index: 99;
+          transition: 0.5s all ease-in-out;
+        }
+        > button:hover::after {
+          --tw-bg-opacity: 1;
+          background-color: rgb(115 200 36 / var(--tw-bg-opacity));
+        }
+      }
+      > div {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+      }
+    }
+  }
+  #section_1 {
+  }
+}
+
+/***************** HOME *****************/
+
+@media (min-width: 1280px) {
+  .xl\:w-10\/12 {
+    width: 83.333333%;
+  }
+
+  .xl\:w-2\/12 {
+    width: 16.666667%;
+  }
 }
