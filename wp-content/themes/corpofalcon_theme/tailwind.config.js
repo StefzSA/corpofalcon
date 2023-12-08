@@ -29,7 +29,7 @@ module.exports = {
         400: "#8fd350",
         500: "#73c824",
       },
-      dark_complement: {
+      dark_component: {
         100: "#d4d4d4",
         200: "#a9a9a9",
         300: "#7f7f7f",

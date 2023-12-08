@@ -15,9 +15,15 @@ body,
 main {
   font-family: "Poppins", sans-serif;
   min-height: 99vh;
+  overflow-x: hidden;
 }
+
 main {
   margin-top: 93px;
+}
+
+.container {
+  @apply lg:max-w-screen-xl;
 }
 /***************** GENERAL *****************/
 
@@ -72,7 +78,6 @@ main {
     background-size: cover;
     background-position: center bottom;
     width: 100%;
-    height: 100%;
     height: var(--height-hero);
     @media only screen and (max-width: 480px) {
       height: var(--height-hero-mb);
@@ -90,15 +95,19 @@ main {
 
   #hero-section {
     overflow: hidden;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
 
-    >.overlay {
+    > .overlay {
+      z-index: 1;
+      position: absolute;
+      width: 100%;
       height: var(--height-hero);
       @media only screen and (max-width: 480px) {
         height: var(--height-hero-mb);
       }
-      z-index: 1;
-      position: absolute;
-      width: 100%;
+
       .mask {
         transform: translateY(60%);
         display: flex;
@@ -108,7 +117,7 @@ main {
         mask-image: url(http://localhost/corpofalcon/wp-content/uploads/2023/12/triangle-shape.svg);
         mask-size: cover;
         @apply bg-secondary-500;
-        right:0;
+        right: 0;
       }
     }
 
@@ -123,7 +132,6 @@ main {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-
 
       .title {
         @apply px-4 md:px-0 text-center md:text-left text-[2.2rem] md:text-[6rem] font-bold text-tertiary-500;
@@ -179,6 +187,60 @@ main {
   }
 
   #section_1 {
+    @apply bg-dark_component-500;
+    position: relative;
+    width: 100%;
+    display: flex;
+    min-height: 700px;
+
+    .section_transition {
+      height: 100%;
+      z-index: 0;
+      .custom-shape-divider-top-1702052748 {
+        position: absolute;
+        top: 0;
+        width: 120%;
+        left: -10%;
+        overflow: hidden;
+        line-height: 0;
+        @apply fill-secondary-500;
+      }
+    }
+    .section_wrap {
+      margin-top: 12rem;
+      margin-bottom: 12rem;
+      z-index: 1;
+      display: flex;
+      .section_content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        width: 100%;
+        .item_wrap{
+          overflow: hidden;
+          min-height: 550px;
+          @apply text-primary-500 rounded bg-primary-100;
+          
+          >*{
+            width: 100%;
+          }
+          >.item_title{
+            min-height: 100px;
+            width: 100%;
+            padding: 0px 15px;
+            @apply text-center text-2xl font-bold text-secondary-500 py-4;
+          }
+          >.item_description{
+            font-weight: 500;
+            padding: 0px 15px;
+            width: 100%;
+            min-height: 200px;
+            @apply text-justify text-dark_component-500 pt-0;
+          }
+        }
+      }
+    }
   }
 }
 /***************** HOME *****************/
