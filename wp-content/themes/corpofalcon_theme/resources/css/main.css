@@ -30,7 +30,8 @@ main {
 /***************** HEADER *****************/
 #header {
   background: rgb(255, 255, 255);
-  position: absolute;
+  position: fixed;
+  box-shadow: 0px 1px 12px rgba(0,0,0,0.2);
   top: 0;
 
   .nav {
@@ -83,6 +84,7 @@ main {
       height: var(--height-hero-mb);
     }
   }
+
   #hero-section.img-bg:before {
     content: "";
     position: absolute;
@@ -134,10 +136,13 @@ main {
       align-items: center;
 
       .title {
+        animation: FadeInDown 2s ease-in-out;
         @apply px-4 md:px-0 text-center md:text-left text-[2.2rem] md:text-[6rem] font-bold text-tertiary-500;
       }
 
       .description {
+        opacity:0;
+        animation: FadeInLeft 2s ease-in-out forwards 1.5s;
         font-size: 1.5rem;
         @apply px-4 md:px-0 text-center md:text-left text-primary-100 w-full md:w-10/12;
       }
@@ -211,36 +216,184 @@ main {
       margin-bottom: 12rem;
       z-index: 1;
       display: flex;
-      .section_content{
+      .section_content {
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 40px;
         width: 100%;
-        .item_wrap{
-          overflow: hidden;
-          min-height: 550px;
-          @apply text-primary-500 rounded bg-primary-100;
-          
-          >*{
-            width: 100%;
+        .item_wrap {
+          padding: 3px 3px;
+          @apply flex items-center;
+          position: relative;
+          .item_content {
+            z-index: 99;
+            min-height: 550px;
+            @apply text-dark_component-500 bg-white;
+
+            > * {
+              width: 100%;
+            }
+            > .item_title {
+              min-height: 100px;
+              width: 100%;
+              padding: 0px 15px;
+              @apply text-center text-2xl font-bold text-secondary-500 py-4;
+            }
+            > .item_description {
+              font-weight: 500;
+              padding: 0px 15px;
+              width: 100%;
+              min-height: 200px;
+              @apply text-justify text-dark_component-500 pt-0;
+            }
           }
-          >.item_title{
-            min-height: 100px;
-            width: 100%;
-            padding: 0px 15px;
-            @apply text-center text-2xl font-bold text-secondary-500 py-4;
-          }
-          >.item_description{
-            font-weight: 500;
-            padding: 0px 15px;
-            width: 100%;
-            min-height: 200px;
-            @apply text-justify text-dark_component-500 pt-0;
-          }
+        }
+        .item_wrap::after {
+          content: "";
+          animation: border_contract .3s reverse ease-in-out;
+        }
+        .item_wrap:hover::after {
+          animation: border_expand .3s forwards ease-in-out normal;
         }
       }
     }
   }
 }
 /***************** HOME *****************/
+
+/***************** ANIMATIONS *****************/
+
+/******** PROPERTIES ********/
+.anim_delay-250ms{
+  animation-delay:.25s;
+}
+.anim_delay-500ms{
+  animation-delay:.5s;
+}
+.anim_delay-750ms{
+  animation-delay:.75s;
+}
+.anim_delay-1s{
+  animation-delay:1s;
+}
+/******** PROPERTIES ********/
+
+
+/******** BASIC ********/
+@keyframes FadeInLeft{
+  from{
+    transform: translateX(-150%);
+    opacity:0;
+  }
+  to{
+    transform: translateX(0%);
+    opacity:1;
+  }
+}
+@keyframes FadeInRight{
+  from{
+    transform: translateX(150%);
+    opacity:0;
+  }
+  to{
+    transform: translateX(0%);
+    opacity:1;
+  }
+}
+@keyframes FadeInDown{
+  from{
+    transform: translateY(-150%);
+    opacity:0;
+  }
+  to{
+    transform: translateY(0%);
+    opacity:1;
+  }
+}
+@keyframes FadeInUp{
+  from{
+    transform: translateY(200%);
+    opacity:0;
+  }
+  to{
+    transform: translateY(0%);
+    opacity:1;
+  }
+}
+
+/******** BASIC ********/
+
+
+@keyframes border_expand{
+  0% { 
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 5px;
+    left: 50%;
+    z-index: -1;
+    bottom: -2px;
+    @apply bg-tertiary-500;
+  }
+
+  25% { 
+    position: absolute;
+    content: "";
+    width: calc(100% + 4px);
+    height: 5px;
+    left: calc(0% - 2px);
+    z-index: -1;
+    bottom: -2px;
+    @apply bg-tertiary-500;
+  }
+
+  100%{
+    position: absolute;
+    content: "";
+    width: calc(100% + 4px);
+    height: calc(100% + 3px);
+    left: calc(0% - 2px);
+    z-index: -1;
+    bottom: -2px;
+    @apply bg-tertiary-500;
+  }
+}
+
+@keyframes border_contract{
+  0% { 
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 5px;
+    left: 50%;
+    z-index: -1;
+    bottom: -2px;
+    @apply bg-tertiary-500;
+  }
+
+  25% { 
+    position: absolute;
+    content: "";
+    width: calc(100% + 4px);
+    height: 5px;
+    left: calc(0% - 2px);
+    z-index: -1;
+    bottom: -2px;
+    @apply bg-tertiary-500;
+  }
+
+  100%{
+    position: absolute;
+    content: "";
+    width: calc(100% + 4px);
+    height: calc(100% + 3px);
+    left: calc(0% - 2px);
+    z-index: -1;
+    bottom: -2px;
+    @apply bg-tertiary-500;
+  }
+}
+
+/***************** Animations *****************/
+

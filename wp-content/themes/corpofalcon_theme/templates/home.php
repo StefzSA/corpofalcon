@@ -6,12 +6,12 @@
 get_header();
 ?>
 <style>
-    .item_wrap>*:first-child {
+    .item_content>*:first-child {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
         height: 250px;
-        width: 100%;
+        overflow: hidden;
     }
 
     .item_img_1 {
@@ -39,10 +39,12 @@ get_header();
                         <h1>Impulsando el desarrollo de Falcón</h1>
                     </div>
                     <div class="description w-full">
-                        <p>Nuestra misión es promover el desarrollo armónico e integral del estado Falcón, a través de la ejecución, promoción, planificación, coordinación, financiamiento y evaluación de programas y proyectos.</p>
+                        <p>Nuestra misión es promover el desarrollo armónico e integral del estado Falcón, a través de
+                            la ejecución, promoción, planificación, coordinación, financiamiento y evaluación de
+                            programas y proyectos.</p>
                     </div>
                     <div class="cta w-full">
-                        <button><a href="#">Obtener Informacion</a></button>
+                        <button><a href="#">Obtener Información</a></button>
                     </div>
                 </div>
             </div>
@@ -51,7 +53,8 @@ get_header();
     <div id="section_1">
         <div class="section_transition">
             <div class="custom-shape-divider-top-1702052748">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
                     <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
                 </svg>
             </div>
@@ -59,33 +62,47 @@ get_header();
         <div class="section_wrap container mx-auto w-full">
             <div class="section_content">
                 <div class="item_wrap w-3/12">
-                    <div class="item_img_1">
-                    </div>
-                    <div class="item_title">
-                        <h2>Lorem Ipsum, dor sit amet consectetur.</h2>
-                    </div>
-                    <div class="item_description">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic adipisci, similique asperiores tempore vero quidem iste provident vitae, distinctio magni quisquam. Explicabo assumenda repellendus quas molestias quia aliquam, tenetur incidunt.</p>
-                    </div>
-                </div>
-                <div class="item_wrap w-3/12">
-                    <div class="item_img_2">
-                    </div>
-                    <div class="item_title">
-                        <h2>Lorem Ipsum, dor sit amet consectetur.</h2>
-                    </div>
-                    <div class="item_description">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic adipisci, similique asperiores tempore vero quidem iste provident vitae, distinctio magni quisquam. Explicabo assumenda repellendus quas molestias quia aliquam, tenetur incidunt.</p>
+                    <div class="item_content">
+                        <div class="item_img_1">
+                        </div>
+                        <div class="item_title">
+                            <h2>Lorem Ipsum, dor sit amet consectetur.</h2>
+                        </div>
+                        <div class="item_description">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic adipisci, similique
+                                asperiores tempore vero quidem iste provident vitae, distinctio magni quisquam.
+                                Explicabo assumenda repellendus quas molestias quia aliquam, tenetur incidunt.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="item_wrap w-3/12">
-                    <div class="item_img_3">
+                    <div class="item_content">
+                        <div class="item_img_2">
+                        </div>
+                        <div class="item_title">
+                            <h2>Lorem Ipsum, dor sit amet consectetur.</h2>
+                        </div>
+                        <div class="item_description">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic adipisci, similique
+                                asperiores
+                                tempore vero quidem iste provident vitae, distinctio magni quisquam. Explicabo assumenda
+                                repellendus quas molestias quia aliquam, tenetur incidunt.</p>
+                        </div>
                     </div>
-                    <div class="item_title">
-                        <h2>Lorem Ipsum, dor sit amet consectetur.</h2>
-                    </div>
-                    <div class="item_description">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic adipisci, similique asperiores tempore vero quidem iste provident vitae, distinctio magni quisquam. Explicabo assumenda repellendus quas molestias quia aliquam, tenetur incidunt.</p>
+                </div>
+                <div class="item_wrap w-3/12">
+                    <div class="item_content">
+                        <div class="item_img_3">
+                        </div>
+                        <div class="item_title">
+                            <h2>Lorem Ipsum, dor sit amet consectetur.</h2>
+                        </div>
+                        <div class="item_description">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic adipisci, similique
+                                asperiores
+                                tempore vero quidem iste provident vitae, distinctio magni quisquam. Explicabo assumenda
+                                repellendus quas molestias quia aliquam, tenetur incidunt.</p>
+                        </div>
                     </div>
                 </div>
             </div>
