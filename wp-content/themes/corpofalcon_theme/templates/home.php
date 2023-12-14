@@ -6,26 +6,28 @@
 get_header();
 ?>
 <style>
-    .item_wrap>*:first-child {
-        position: absolute;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: calc(100% - 4px);
-        width: calc(100% - 4px);
-        overflow: hidden;
-    }
+    #section_1 {
+        .item_wrap>*:first-child {
+            position: absolute;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: calc(100% - 4px);
+            width: calc(100% - 4px);
+            overflow: hidden;
+        }
 
-    .item_img_1 {
-        background-image: url('http://localhost/corpofalcon/wp-content/uploads/2023/12/pexels-anna-shvets-4482900-scaled.jpg');
-    }
+        .item_img_1 {
+            background-image: url('http://localhost/corpofalcon/wp-content/uploads/2023/12/pexels-anna-shvets-4482900-scaled.jpg');
+        }
 
-    .item_img_2 {
-        background-image: url('http://localhost/corpofalcon/wp-content/uploads/2023/12/pexels-christina-morillo-1181396-scaled.jpg');
-    }
+        .item_img_2 {
+            background-image: url('http://localhost/corpofalcon/wp-content/uploads/2023/12/pexels-christina-morillo-1181396-scaled.jpg');
+        }
 
-    .item_img_3 {
-        background-image: url('http://localhost/corpofalcon/wp-content/uploads/2023/12/medanos.jpg');
+        .item_img_3 {
+            background-image: url('http://localhost/corpofalcon/wp-content/uploads/2023/12/medanos.jpg');
+        }
     }
 </style>
 
@@ -95,9 +97,9 @@ get_header();
                                 <h2>Salon Simon Bolivar</h2>
                             </div>
                             <div class="item_description">
-                            <p><span class="item_highlight">¿Necesitas un espacio para tu próxima conferencia?</span> ¡Alquila uno de nuestros salones de conferencias!
-                                Nuestros salones son espaciosos y modernos, y están equipados con todo lo que necesitas para que
-                                tu evento sea un éxito.</p>
+                                <p><span class="item_highlight">¿Necesitas un espacio para tu próxima conferencia?</span> ¡Alquila uno de nuestros salones de conferencias!
+                                    Nuestros salones son espaciosos y modernos, y están equipados con todo lo que necesitas para que
+                                    tu evento sea un éxito.</p>
                             </div>
                         </div>
                     </div>
@@ -121,6 +123,60 @@ get_header();
                         </div>
                     </div>
                 </a>
+            </div>
+        </div>
+    </div>
+    <div id="section_2" class="container min-h-[500px] w-full">
+        <div class="section_value w-full px-[var(--spacing-general-25)]">
+            <div class="title w-full mx-auto text-center text-tertiary-500 font-bold tracking-wide text-6xl">
+                <h2>Steano mmlo</h2>
+            </div>
+            <div class="w-full flex flex-wrap justify-center items-center gap-8">
+                <div class="w-full md:w-3/12 py-6 md:py-0 item_wrap">
+                    <div class="w-full">
+                        <div class="item_icon">
+                            <i class="fa-solid fa-poo"></i>
+                        </div>
+                        <div class="item_content">
+                            <div class="item_title">
+                                <h2>Lorem ipsum dolor</h2>
+                            </div>
+                            <div class="item_description">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugit ab repellendus necessitatibus, blanditiis harum rem commodi praesentium nulla voluptatum atque suscipit quas corrupti, iusto temporibus veritatis perspiciatis optio maxime.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-3/12 py-6 md:py-0 item_wrap">
+                    <div class="w-full">
+                        <div class="item_icon">
+                            <i class="fa-solid fa-poo"></i>
+                        </div>
+                        <div class="item_content">
+                            <div class="item_title">
+                                <h2>Lorem ipsum dolor</h2>
+                            </div>
+                            <div class="item_description">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ipsam deserunt eos sequi facere vitae nemo aliquid, repellat placeat eius, doloremque non est tempora. Perferendis eligendi odit nesciunt praesentium illo!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-3/12 py-6 md:py-0 item_wrap">
+                    <div class="w-full">
+                        <div class="item_icon">
+                            <i class="fa-solid fa-poo"></i>
+                        </div>
+                        <div class="item_content">
+                            <div class="item_title">
+                                <h2>Lorem ipsum dolor</h2>
+                            </div>
+                            <div class="item_description">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur est error accusantium voluptatum reprehenderit magni nesciunt incidunt voluptas quod obcaecati quaerat, iusto alias beatae quae et esse doloribus corrupti fugit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
