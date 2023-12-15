@@ -25,6 +25,7 @@ main {
 .container {
   @apply lg:max-w-screen-xl;
 }
+
 /***************** GENERAL *****************/
 
 /***************** HEADER *****************/
@@ -58,13 +59,15 @@ main {
     min-height: 85px;
   }
 }
+
 /***************** GENERAL *****************/
 
 /***************** COMPONENTS *****************/
 
 .cta {
   @apply flex justify-center md:justify-start;
-  > button {
+
+  >button {
     position: relative;
     padding: 10px 15px;
     height: 50px;
@@ -74,12 +77,13 @@ main {
     font-weight: 600;
     @apply border-secondary-500 bg-secondary-500 text-primary-100;
   }
-  > button:hover {
+
+  >button:hover {
     transform: translateY(-5px);
     @apply bg-secondary-500 text-primary-100;
   }
 
-  > button::after {
+  >button::after {
     position: absolute;
     content: "";
     width: 0%;
@@ -91,7 +95,8 @@ main {
     transition: 0.5s all ease-in-out;
     @apply bg-tertiary-500;
   }
-  > button:hover::after {
+
+  >button:hover::after {
     bottom: -1px;
     width: 100%;
     left: 0%;
@@ -122,6 +127,7 @@ main {
     background-position: center bottom;
     width: 100%;
     height: var(--height-hero);
+
     @media only screen and (max-width: 480px) {
       height: var(--height-hero-mb);
     }
@@ -143,11 +149,12 @@ main {
     position: absolute;
     width: 100%;
 
-    > .overlay {
+    >.overlay {
       z-index: 1;
       position: absolute;
       width: 100%;
       height: var(--height-hero);
+
       @media only screen and (max-width: 480px) {
         height: var(--height-hero-mb);
       }
@@ -168,10 +175,12 @@ main {
     .columns {
       z-index: 1;
       height: var(--height-hero);
+
       @media only screen and (max-width: 480px) {
         height: var(--height-hero-mb);
       }
     }
+
     .left {
       display: flex;
       flex-wrap: wrap;
@@ -188,7 +197,8 @@ main {
         font-size: 1.5rem;
         @apply px-4 md:px-0 text-center md:text-left text-primary-100 w-full md:w-10/12;
       }
-      > div {
+
+      >div {
         @apply py-5;
       }
     }
@@ -234,9 +244,9 @@ main {
           padding: 3px 3px;
           @apply flex items-center justify-center;
           position: relative;
-          transition:all .3s ease-in-out;
+          transition: all .3s ease-in-out;
 
-          .item_icon{
+          .item_icon {
             width: 100%;
             height: 100%;
             position: absolute;
@@ -263,33 +273,35 @@ main {
             min-height: 450px;
             @apply text-dark_component-500 bg-transparent flex justify-center flex-col;
 
-            > * {
+            >* {
               width: 100%;
             }
 
-            > .item_title {
+            >.item_title {
               min-height: 100px;
               width: 100%;
               padding: 0px 15px;
               @apply text-center text-2xl font-bold text-secondary-400 py-4;
             }
 
-            > .item_description {
+            >.item_description {
               font-weight: 500;
               padding: 0px 15px;
               width: 100%;
               min-height: 200px;
               @apply text-justify text-white pt-0;
 
-              .item_highlight{
+              .item_highlight {
                 @apply text-tertiary-500 font-bold text-lg;
               }
             }
           }
         }
-        .item_wrap:hover .item_icon{
+
+        .item_wrap:hover .item_icon {
           opacity: 0;
         }
+
         .item_wrap:hover .overlay {
           z-index: 0;
           position: absolute;
@@ -300,64 +312,98 @@ main {
           backdrop-filter: blur(4px);
           transition: all 0.5s ease-in-out;
         }
+
         .item_wrap:hover .item_content {
           transition: all 0.5s ease-in-out;
           transform: translateY(0%);
           z-index: 99;
           @apply text-dark_component-500;
         }
-        .item_wrap:hover{
+
+        .item_wrap:hover {
           transform: translateY(-3%);
-          transition:all .3s ease-in-out;
+          transition: all .3s ease-in-out;
         }
+
         .item_wrap::before {
           content: "";
           animation: border_contract 0.3s reverse ease-in-out;
         }
+
         .item_wrap:hover::before {
           animation: border_expand 0.3s forwards ease-in-out normal;
         }
       }
     }
   }
-  #section_2{
-    .section_value{
+
+  #section_2 {
+    .section_value {
       margin-top: 7rem;
       margin-bottom: 7rem;
     }
-    .title{
+
+    .title {
       padding-bottom: 9rem;
+      position: relative;
+      z-index: 1;
     }
-    .item_wrap{
+
+    .item_wrap {
       overflow: hidden;
       padding: 3px 3px;
       @apply flex items-center justify-center flex-wrap;
 
-      .item_icon{
+      .item_icon {
         width: 100%;
         height: 100%;
         @apply flex justify-center items-center text-8xl text-dark_component-500;
       }
 
-      .item_content{
-        >*{
+      .item_content {
+        >* {
           width: 100%;
         }
-        > .item_title{
+
+        >.item_title {
           min-height: 100px;
           @apply py-5 text-center text-2xl font-bold text-secondary-400;
         }
-        > .item_description{
+
+        >.item_description {
           text-align: justify;
           min-height: 200px;
         }
       }
     }
-    .item_wrap:nth-child(2){
+
+    .item_wrap:nth-child(2) {
       transform: translateY(-30px);
     }
   }
+
+  #section_3 {
+    @apply bg-dark_component-500;
+
+    .rectangle {
+      height: 350px;
+      width: 350px;
+      @apply bg-primary-300;
+    }
+
+    .wrapper_info {
+      padding: 20px;
+      > h2 {
+        @apply text-tertiary-400 text-left font-bold text-2xl;
+        padding-top: 10px;
+      }
+      > p {
+        @apply text-tertiary-300 text-left text-lg font-light;
+      }
+    }
+  }
 }
+
 /***************** HOME *****************/
 
 /***************** ANIMATIONS *****************/
@@ -366,15 +412,19 @@ main {
 .anim_delay-250ms {
   animation-delay: 0.25s;
 }
+
 .anim_delay-500ms {
   animation-delay: 0.5s;
 }
+
 .anim_delay-750ms {
   animation-delay: 0.75s;
 }
+
 .anim_delay-1s {
   animation-delay: 1s;
 }
+
 /******** PROPERTIES ********/
 
 /******** BASIC ********/
@@ -383,36 +433,43 @@ main {
     transform: translateX(-150%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0%);
     opacity: 1;
   }
 }
+
 @keyframes FadeInRight {
   from {
     transform: translateX(150%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0%);
     opacity: 1;
   }
 }
+
 @keyframes FadeInDown {
   from {
     transform: translateY(-150%);
     opacity: 0;
   }
+
   to {
     transform: translateY(0%);
     opacity: 1;
   }
 }
+
 @keyframes FadeInUp {
   from {
     transform: translateY(200%);
     opacity: 0;
   }
+
   to {
     transform: translateY(0%);
     opacity: 1;

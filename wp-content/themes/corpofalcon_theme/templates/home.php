@@ -126,7 +126,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div id="section_2" class="container min-h-[500px] w-full">
+    <div id="section_2" class="container min-h-[700px] w-full mx-auto">
         <div class="section_value w-full px-[var(--spacing-general-25)]">
             <div class="title w-full mx-auto text-center text-tertiary-500 font-bold tracking-wide text-6xl">
                 <h2>Steano mmlo</h2>
@@ -142,7 +142,11 @@ get_header();
                                 <h2>Lorem ipsum dolor</h2>
                             </div>
                             <div class="item_description">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugit ab repellendus necessitatibus, blanditiis harum rem commodi praesentium nulla voluptatum atque suscipit quas corrupti, iusto temporibus veritatis perspiciatis optio maxime.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Accusantium fugit ab repellendus
+                                    necessitatibus, blanditiis harum rem commodi
+                                    praesentium nulla voluptatum atque suscipit quas
+                                    corrupti, iusto temporibus veritatis perspiciatis optio maxime.</p>
                             </div>
                         </div>
                     </div>
@@ -157,7 +161,10 @@ get_header();
                                 <h2>Lorem ipsum dolor</h2>
                             </div>
                             <div class="item_description">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ipsam deserunt eos sequi facere vitae nemo aliquid, repellat placeat eius, doloremque non est tempora. Perferendis eligendi odit nesciunt praesentium illo!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Magnam, ipsam deserunt eos sequi facere vitae nemo
+                                    aliquid, repellat placeat eius, doloremque non est tempora.
+                                    Perferendis eligendi odit nesciunt praesentium illo!</p>
                             </div>
                         </div>
                     </div>
@@ -172,10 +179,26 @@ get_header();
                                 <h2>Lorem ipsum dolor</h2>
                             </div>
                             <div class="item_description">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur est error accusantium voluptatum reprehenderit magni nesciunt incidunt voluptas quod obcaecati quaerat, iusto alias beatae quae et esse doloribus corrupti fugit.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Tenetur est error accusantium voluptatum reprehenderit
+                                    magni nesciunt incidunt voluptas quod obcaecati
+                                    quaerat, iusto alias beatae quae et esse doloribus corrupti fugit.</p>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="section_3" class="min-h-[700px] w-full">
+        <div class="container w-full mx-auto">
+            <div class="w-full py-10 wrapper_testimonial flex justify-center items-center">
+                <div class="w-4/12 rectangle"></div>
+                <div class="w-5/12 wrapper_info flex flex-wrap content-center">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Dolorum aut blanditiis nam iusto vitae similique odit ipsam.
+                        Dolores aut cum obcaecati totam voluptatum.</p>
+                    <h2>Lic. Sergio Quintero</h2>
                 </div>
             </div>
         </div>
