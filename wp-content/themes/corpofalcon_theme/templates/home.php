@@ -6,34 +6,40 @@
 get_header();
 ?>
 <style>
-    .item_wrap>*:first-child {
-        position: absolute;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: calc(100% - 4px);
-        width: calc(100% - 4px);
-        overflow: hidden;
-    }
+    #section_1 {
+        .item_wrap>*:first-child {
+            position: absolute;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: calc(100% - 4px);
+            width: calc(100% - 4px);
+            overflow: hidden;
+        }
 
-    .item_img_1 {
-        background-image: url('http://localhost/corpofalcon/wp-content/uploads/2023/12/pexels-anna-shvets-4482900-scaled.jpg');
-    }
+        .item_img_1 {
+            background-image: url('http://localhost/corpofalcon/wp-content/uploads/2023/12/pexels-anna-shvets-4482900-scaled.jpg');
+        }
 
-    .item_img_2 {
-        background-image: url('http://localhost/corpofalcon/wp-content/uploads/2023/12/pexels-christina-morillo-1181396-scaled.jpg');
-    }
+        .item_img_2 {
+            background-image: url('http://localhost/corpofalcon/wp-content/uploads/2023/12/pexels-christina-morillo-1181396-scaled.jpg');
+        }
 
-    .item_img_3 {
-        background-image: url('http://localhost/corpofalcon/wp-content/uploads/2023/12/medanos.jpg');
+        .item_img_3 {
+            background-image: url('http://localhost/corpofalcon/wp-content/uploads/2023/12/medanos.jpg');
+        }
     }
 </style>
 
 <main id="<?php echo $post_slug = get_post_field('post_name', get_post()); ?>">
-    <div id="hero-section" class="img-bg">
+    <div id="hero-section">
         <div class="overlay">
             <div class="mask"></div>
         </div>
+        <div id="hero-bg" class="img-bg">
+
+        </div>
+        <div class="mask"></div>
         <div class="columns container w-full mx-auto relative z-auto h-full">
             <div class="flex flex-wrap w-full h-full items-center">
                 <div class="left w-full md:w-10/12">
@@ -95,9 +101,9 @@ get_header();
                                 <h2>Salon Simon Bolivar</h2>
                             </div>
                             <div class="item_description">
-                            <p><span class="item_highlight">¿Necesitas un espacio para tu próxima conferencia?</span> ¡Alquila uno de nuestros salones de conferencias!
-                                Nuestros salones son espaciosos y modernos, y están equipados con todo lo que necesitas para que
-                                tu evento sea un éxito.</p>
+                                <p><span class="item_highlight">¿Necesitas un espacio para tu próxima conferencia?</span> ¡Alquila uno de nuestros salones de conferencias!
+                                    Nuestros salones son espaciosos y modernos, y están equipados con todo lo que necesitas para que
+                                    tu evento sea un éxito.</p>
                             </div>
                         </div>
                     </div>

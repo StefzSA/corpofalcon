@@ -620,6 +620,10 @@ video {
   width: 100%;
 }
 
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -634,11 +638,6 @@ video {
 
 .justify-center {
   justify-content: center;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
 
 .text-center {
@@ -814,35 +813,39 @@ main {
   --height-hero: 900px;
   --height-hero-mb: 700px;
   /****** VAR DEFINITION ******/
-  #hero-section.img-bg {
+  #hero-section {
     position: relative;
-    background-image: url(http://localhost/corpofalcon/wp-content/uploads/2023/12/medanos.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
     width: 100%;
     height: var(--height-hero);
     @media only screen and (max-width: 480px) {
       height: var(--height-hero-mb);
     }
-  }
-  #hero-section.img-bg:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.7;
-    z-index: 1;
-  }
-  #hero-section.img-bg:before {
-    --tw-bg-opacity: 1;
-    background-color: rgb(83 83 83 / var(--tw-bg-opacity));
-  }
-  #hero-section {
-    overflow: hidden;
-    z-index: 1;
-    position: absolute;
-    width: 100%;
+    >.img-bg{
+      position: absolute;
+      background-image: url(http://localhost/corpofalcon/wp-content/uploads/2023/12/medanos.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      width: 120%;
+      height: 140%;
+      left: 0%;
+      &:before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        z-index: 1;
+      }
+      &:before {
+        --tw-bg-opacity: 1;
+        background-color: rgb(83 83 83 / var(--tw-bg-opacity));
+      }
+    }
     > .overlay {
       z-index: 1;
       position: absolute;
@@ -1153,10 +1156,10 @@ main {
         }
         .item_wrap::before {
           content: "";
-          animation: border_contract 0.3s reverse ease-in-out;
+          animation: border_contract 1s reverse ease-in-out;
         }
         .item_wrap:hover::before {
-          animation: border_expand 0.3s forwards ease-in-out normal;
+          animation: border_expand .4s forwards ease-in-out normal;
         }
       }
     }
