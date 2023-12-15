@@ -111,35 +111,36 @@ main {
   --height-hero-mb: 700px;
   /****** VAR DEFINITION ******/
 
-  #hero-section.img-bg {
+  #hero-section {
     position: relative;
-    background-image: url(http://localhost/corpofalcon/wp-content/uploads/2023/12/medanos.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
     width: 100%;
     height: var(--height-hero);
     @media only screen and (max-width: 480px) {
       height: var(--height-hero-mb);
     }
-  }
-
-  #hero-section.img-bg:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.7;
-    z-index: 1;
-    @apply bg-primary-500;
-  }
-
-  #hero-section {
-    overflow: hidden;
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-
+    >.img-bg{
+      position: absolute;
+      background-image: url(http://localhost/corpofalcon/wp-content/uploads/2023/12/medanos.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      width: 120%;
+      height: 140%;
+      left: 0%;
+      &:before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.7;
+        z-index: 1;
+        @apply bg-primary-500;
+      }
+    }
     > .overlay {
       z-index: 1;
       position: absolute;
@@ -161,7 +162,6 @@ main {
         right: 0;
       }
     }
-
     .columns {
       z-index: 1;
       height: var(--height-hero);
@@ -309,10 +309,10 @@ main {
         }
         .item_wrap::before {
           content: "";
-          animation: border_contract 0.3s reverse ease-in-out;
+          animation: border_contract 1s reverse ease-in-out;
         }
         .item_wrap:hover::before {
-          animation: border_expand 0.3s forwards ease-in-out normal;
+          animation: border_expand .4s forwards ease-in-out normal;
         }
       }
     }
