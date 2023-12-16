@@ -191,7 +191,7 @@ get_header();
         </div>
     </div>
     <div id="section_3" class="min-h-[700px] w-full">
-        <div class="container w-full mx-auto">
+        <div class="container flex w-full mx-auto min-h-[700px] items-center">
             <div class="w-full py-10 wrapper_testimonial flex justify-center items-center">
                 <div class="w-4/12 rectangle"></div>
                 <div class="w-5/12 wrapper_info flex flex-wrap content-center">
