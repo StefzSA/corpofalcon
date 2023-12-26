@@ -1,22 +1,28 @@
+function parallaxPan(el, parent) {
 
+    parent.onmousemove = e => {
+        const mouseX = e.clientX,
+            mouseY = e.clientY;
 
-    function parallaxPan(el){ 
-        const parallax = el;
+        const decimalX = mouseX / parent.offsetWidth,
+            decimalY = mouseY / parent.offsetHeight;
         
-        el.onmousemove = e =>{
-            const mouseX = e.clientX, mouseY = e.clientY;
-            
-            const decimalX = mouseX/el.innerWidth, decimalY = mouseY/el.innerHeight;
+        const maxX = el.offsetWidth - $(parent).innerWidth(),
+        maxY = el.offsetHeight - $(parent).innerHeight();
 
-            const panX  = el.offsetWidth * decimalX, panY  = el.offsetHeight * decimalY;
+        const panX = maxX * decimalX * -1,
+            panY = maxY * decimalY * -1;
+        
+        console.log('limits: '+maxX*-1+' and '+ maxY*-1);
+        console.log('parent: '+window.innerWidth+' and '+ window.innerHeight);
+        console.log('offsets: '+el.offsetWidth+' and '+ el.offsetHeight);
+        console.log(panX+' and '+ panY);
+        
 
-            el.animate({
-                transform: `translate( ${panX}px, ${panY}px)`
-            },
-            {
-                duration: 3000,
-                fill: forwards,
-                easing: ease,
-            });
-        }
+        el.animate( { transform: `translate(${panX}px, ${panY}px)` }, {
+            duration: 4000,
+            fill: 'forwards',
+        })
+
     }
+}
