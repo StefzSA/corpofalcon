@@ -32,8 +32,8 @@ get_header();
 </style>
 
 <main id="<?php echo $post_slug = get_post_field('post_name', get_post()); ?>">
+    <div class="overlay light"></div>
     <div id="hero-section">
-        <div class="overlay"></div>
         <div id="hero-bg" class="img-bg"></div>
         <div class="mask"></div>
         <div class="columns container w-full mx-auto relative z-auto h-full">
@@ -64,7 +64,8 @@ get_header();
         <div class="section_wrap container mx-auto w-full">
             <div class="section_content flex flex-wrap">
                 <div class="w-full">
-                    <h2 class="w-full font-bold text-6xl text-tertiary-500 text-center tracking-wide pb-6">Nuestros servicios</h2>
+                    <h2 class="w-full font-bold text-6xl text-tertiary-500 text-center tracking-wide pb-6">Nuestros
+                        servicios</h2>
                 </div>
                 <a href="#" class="w-3/12">
                     <div class="item_wrap w-full">
