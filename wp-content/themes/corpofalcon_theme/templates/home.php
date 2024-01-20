@@ -59,12 +59,14 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="section_transition"></div>
+    <div class="section_transition">
+        <img src="http://localhost/corpofalcon/wp-content/uploads/2024/01/layered-waves-haikei-3-cropped.svg">
+    </div>
     <div id="section_1">
         <div class="section_wrap container mx-auto w-full">
             <div class="section_content flex flex-wrap">
                 <div class="w-full">
-                    <h2 class="w-full font-bold text-6xl text-tertiary-500 text-center tracking-wide pb-6">Nuestros
+                    <h2 class="w-full font-bold text-6xl text-secondary-500 text-center tracking-wide pb-6">Nuestros
                         servicios</h2>
                 </div>
                 <a href="#" class="w-3/12">
@@ -118,7 +120,7 @@ get_header();
                             <div class="item_title">
                                 <h3>Salinas</h3>
                             </div>
-                            <div class="item_icon"><i class="fa-solid fa-cannabis"></i></div>
+                            <div class="item_icon"><i class="fa-solid fa-mountain-sun"></i></div>
                         </div>
                         <div class="item_content">
                             <div class="item_description">
