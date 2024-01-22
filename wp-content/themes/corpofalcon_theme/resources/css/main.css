@@ -110,15 +110,15 @@ main {
   @apply bg-white;
   /****** VAR DEFINITION ******/
   --height-hero: 900px;
-  --height-hero-mb: 700px;
+  --height-hero-mb: 500px;
   /****** VAR DEFINITION ******/
   .overlay.light{
     position: absolute;
     width: 100%;
     background: linear-gradient(0deg, rgba(69,136,246,0.3491771708683473) 0%, rgba(255,255,255,1) 100%);
-    height: calc(var(--height-hero) + 250px);
+    height: calc(var(--height-hero) + 10%);
     @media only screen and (max-width: 480px) {
-      height: calc(var(--height-hero-mb) + 100px);
+      height: calc(var(--height-hero-mb) + 25px);
     }
   }
   #hero-section {

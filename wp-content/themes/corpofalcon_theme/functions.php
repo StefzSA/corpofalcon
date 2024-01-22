@@ -1,4 +1,6 @@
 <?php
+//Constant definitions
+define("PARTS_DIR", 'wp-content\themes\corpofalcon_theme\templates\template-parts');
 
 // frontend script & style
 function assets_load_header_top() {
@@ -17,7 +19,7 @@ add_action('wp_enqueue_scripts', 'assets_load_header_top');
 add_action('wp_enqueue_scripts', 'assets_load_header_bottom');
 add_action('wp_footer', 'assets_load_footer');
 
-
+/*
 add_action("wpcf7_before_send_mail", "wpcf7_do_something_else");  
 
 function form_redirect($form_ID) {
@@ -26,5 +28,5 @@ function form_redirect($form_ID) {
     return $wpcf;
 }
 
-
+*/
 
