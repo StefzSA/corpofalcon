@@ -32,7 +32,7 @@
                 <h2 class="w-full font-bold text-6xl text-secondary-500 text-center tracking-wide pb-6">Nuestros
                     servicios</h2>
             </div>
-            <a href="#" class="w-[29%]">
+            <a href="#" class="w-10/12 md:w-[29%]">
                 <div class="item_wrap w-full">
                     <div class="item_img_1">
                         <div class="overlay"></div>
@@ -56,7 +56,7 @@
                     </div>
                 </div>
             </a>
-            <a href="#" class="w-[29%]">
+            <a href="#" class="w-10/12 md:w-[29%]">
                 <div class="item_wrap w-full">
                     <div class="item_img_2">
                         <div class="overlay"></div>
@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </a>
-            <a href="#" class="w-[29%]">
+            <a href="#" class="w-10/12 md:w-[29%]">
                 <div class="item_wrap w-full">
                     <div class="item_img_3">
                         <div class="overlay"></div>
