@@ -776,6 +776,10 @@ video {
   min-height: ;
 }
 
+.min-h-\[300px\] {
+  min-height: 300px;
+}
+
 .w-1\/4 {
   width: 25%;
 }
@@ -905,8 +909,36 @@ video {
   background-color: rgb(250 251 246 / 0.3);
 }
 
+.bg-\[rgba\] {
+  background-color: rgba;
+}
+
+.bg-\[rgba\(0\2c 0\2c 0\2c 0\.3\)\] {
+  background-color: rgba(0,0,0,0.3);
+}
+
+.bg-\[rgba\(0\2c 0\2c 0\2c 0\.6\)\] {
+  background-color: rgba(0,0,0,0.6);
+}
+
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(\'\/img\/hero-pattern\.svg\'\)\] {
+  background-image: url('/img/hero-pattern.svg');
+}
+
+.bg-\[url\(\'http\:\/\/localhost\/corpofalcon\/wp-content\/uploads\/2023\/12\/medanos\.jpg\'\)\] {
+  background-image: url('http://localhost/corpofalcon/wp-content/uploads/2023/12/medanos.jpg');
+}
+
+.bg-\[url\(\'http\:\/\/localhost\/corpofalcon\/wp-content\/uploads\/2023\/12\/medanos\.jpg\'\)\2c \] {
+  background-image: url('http://localhost/corpofalcon/wp-content/uploads/2023/12/medanos.jpg'),;
+}
+
+.bg-\[url\(\'http\:\/\/localhost\/corpofalcon\/wp-content\/uploads\/2023\/12\/medanos\.jpg\'\)\2c rgba\(0\2c 0\2c 0\2c 0\.3\)\] {
+  background-image: url('http://localhost/corpofalcon/wp-content/uploads/2023/12/medanos.jpg'),rgba(0,0,0,0.3);
 }
 
 .from-white {
@@ -917,6 +949,10 @@ video {
 
 .to-secondary-200 {
   --tw-gradient-to: #b5cffb var(--tw-gradient-to-position);
+}
+
+.bg-cover {
+  background-size: cover;
 }
 
 .p-3 {
@@ -1002,6 +1038,10 @@ video {
   font-weight: 700;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .tracking-wide {
   letter-spacing: 0.025em;
 }
@@ -1044,6 +1084,10 @@ video {
 .text-secondary-400 {
   --tw-text-opacity: 1;
   color: rgb(106 160 248 / var(--tw-text-opacity));
+}
+
+.bg-blend-color {
+  background-blend-mode: color;
 }
 
 .shadow-secondary-500 {

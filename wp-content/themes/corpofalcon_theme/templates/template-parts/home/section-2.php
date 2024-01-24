@@ -29,6 +29,11 @@
                 <div class="w-full flex justify-center mt-8">
                     <div class="cta"><a href="/nosotros">Aprende más</a></div>
                 </div>
+                <div id="form_section" class="w-full flex justify-center mt-8">
+                    <?php echo apply_shortcodes('[contact-form-7 id="8001c47" title="Contact form 1"]'); ?>
+                </div>
+                
             </div>
         </div>
-    </div>  
+    </div> 
+</div>
