@@ -16,7 +16,7 @@
 
                 foreach ($itemQty as $item) { ?>
                     <div class="w-1/5 p-4">
-                        <div class="transition-all bg-white hover:shadow-md min-h-[250px] flex flex-warp flex-col justify-center p-3 rounded">
+                        <div class="transition-all bg-white hover:shadow-lg min-h-[250px] flex flex-warp flex-col justify-center p-3 rounded">
                             <div class="w-full flex justify-center"><i class="text-secondary-500 text-8xl fa-solid fa-handshake"></i></div>
                             <div class="w-full text-dark_component-300 text-center mt-6">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
