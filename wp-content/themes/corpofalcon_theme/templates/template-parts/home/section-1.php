@@ -29,7 +29,7 @@
     <div class="section_wrap container mx-auto w-full">
         <div class="section_content flex flex-wrap">
             <div class="w-full">
-                <h2 class="w-full font-bold text-6xl text-secondary-500 text-center tracking-wide pb-6">Nuestros
+                <h2 class="w-full font-bold text-3xl md:text-4xl text-secondary-500 text-center tracking-wide pb-16">Nuestros
                     servicios</h2>
             </div>
             <a href="#" class="w-10/12 md:w-[29%]">

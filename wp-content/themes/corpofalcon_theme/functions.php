@@ -6,6 +6,7 @@ define("PARTS_DIR", 'wp-content\themes\corpofalcon_theme\templates\template-part
 function assets_load_header_top() {
 	wp_enqueue_style('tailwind-css', get_template_directory_uri() .'/resources/css/tailwind/output.css');
 	wp_enqueue_style('fontawesome6', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+	wp_enqueue_style('Neue Montreal', 'https://fonts.cdnfonts.com/css/montreal');
 }
 
 function assets_load_header_bottom() {

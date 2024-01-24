@@ -10,9 +10,11 @@ All you need to change is probably here, style.css is only for WordPress to get 
 
 /***************** GENERAL *****************/
 
+@import url('https://fonts.cdnfonts.com/css/montreal');
+
 body,
 main {
-  font-family: "Poppins", sans-serif!important;
+  font-family: 'Montreal', sans-serif;
   min-height: 99vh;
   overflow-x: hidden;
 }
@@ -41,7 +43,7 @@ main {
   }
   
   .logo {
-    background-image: url(http://localhost/corpofalcon/wp-content/uploads/2023/12/Remove-bg.ai_1701878435680.png);
+    background-image: url(http://localhost/corpofalcon/wp-content/uploads/2024/01/logo_header.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -66,7 +68,7 @@ main {
 
 .cta {
   @apply flex justify-center md:justify-start text-white;
-  > button {
+  > a {
     border-radius:50px;
     position: relative;
     padding: 12px 24px;
@@ -76,12 +78,12 @@ main {
     font-weight: 600;
     @apply border-secondary-500 bg-secondary-500;
   }
-  > button:hover {
+  > a:hover {
     transform: translateY(-5px);
     @apply bg-secondary-500;
   }
   
-  > button::after {
+  > a::after {
     
     position: absolute;
     content: "";
@@ -94,7 +96,7 @@ main {
     transition: 0.5s all ease-in-out;
     @apply bg-tertiary-500;
   }
-  > button:hover::after {
+  > a:hover::after {
     border-radius:0px 0px 10px 10px;
     bottom: 0px;
     width: 84%;
@@ -113,13 +115,13 @@ main {
   @apply bg-white;
   /****** VAR DEFINITION ******/
   --height-hero: 900px;
-  --height-hero-mb: 500px;
+  --height-hero-mb: 600px;
   /****** VAR DEFINITION ******/
   .overlay.light{
     position: absolute;
     width: 100%;
     background: linear-gradient(0deg, rgba(69,136,246,0.3491771708683473) 0%, rgba(255,255,255,1) 100%);
-    height: calc(var(--height-hero) + 10%);
+    height: calc(var(--height-hero) + 15%);
     @media only screen and (max-width: 480px) {
       height: calc(var(--height-hero-mb) + 25px);
     }
@@ -166,7 +168,7 @@ main {
       
       .title {
         animation: FadeInDown 2s ease-in-out;
-        @apply px-4 md:px-0 text-center md:text-left text-[2.2rem] md:text-[6rem] font-bold text-tertiary-500 leading-none;
+        @apply px-4 md:px-0 text-center md:text-left text-6xl md:text-8xl font-bold text-tertiary-500 leading-none;
       }
       
       .description {
@@ -244,9 +246,9 @@ main {
             transition: all 0.5s ease-in-out;
             min-height: 100px;
             width: 100%;
-            padding: 0px 15px;
+            padding: 2rem 1.2rem!important;
             text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
-            @apply text-center text-3xl font-bold text-tertiary-500 py-4;
+            @apply text-center text-3xl font-bold text-tertiary-500;
             >h3{
               width:100%;
               min-height:100px;
@@ -262,8 +264,8 @@ main {
             }
             
             > .item_description {
+              padding: 1rem 1.2rem;
               font-weight: 500;
-              padding: 0px 15px;
               width: 100%;
               min-height: 200px;
               @apply text-justify text-white pt-0;
@@ -279,10 +281,8 @@ main {
         @media (hover: hover){
           .item_title {
             >h3{
-              transition: bottom 0.5s ease-in-out;
-              position:absolute; 
-              bottom:10%;
-              left:0;
+              transition: all 0.5s ease-in-out;
+              transform:translateY(300%);
             }
           }
           .item_content {
@@ -297,11 +297,9 @@ main {
             transition: all 0.5s ease-in-out;
             @apply text-secondary-500;
             >h3{
-              transition: bottom 0.5s ease-in-out;
+              transition: all 0.5s ease-in-out;
               width:100%;
-              position:absolute; 
-              bottom:70%;
-              left:0;
+              transform:translateY(0%);
             }
           }
           .item_wrap:hover .overlay {
@@ -332,8 +330,6 @@ main {
             animation: border_expand .4s forwards ease-in-out normal;
           }
         }
-
-        /*Devices with no hover*/
       }
     }
   }
