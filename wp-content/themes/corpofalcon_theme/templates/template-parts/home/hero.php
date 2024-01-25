@@ -6,7 +6,7 @@
     <div class="columns container w-full mx-auto relative z-auto h-full">
         <div class="flex flex-wrap w-full h-full items-center">
             <div class="left w-full md:w-8/12">
-                <div class="title w-full">
+                <div class="title w-full text-6xl md:text-8xl">
                     <h1>Impulsando Falcón</h1>
                 </div>
                 <div class="description w-full">
@@ -15,7 +15,7 @@
                         programas y proyectos.</p>
                 </div>
                 <div class="cta dark-text w-full">
-                    <button><a href="#">Obtener Información</a></button>
+                    <a href="/servicios">Obtener Información</a>
                 </div>
             </div>
             <div class="right hidden md:block w-full md:w-4/12">
