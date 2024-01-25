@@ -37,6 +37,7 @@ module.exports = {
         500: "#292929",
       },
       white: "#FAFBF6",
+      twhite: "#FFFFFF",
       transparent: "transparent",
     },
   },
