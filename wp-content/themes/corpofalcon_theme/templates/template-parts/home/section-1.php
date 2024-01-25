@@ -2,16 +2,7 @@
 ?>
 <style>
     #section_1 {
-        .item_wrap>*:first-child {
-            position: absolute;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: calc(100% - 4px);
-            width: calc(100% - 4px);
-            overflow: hidden;
-        }
-
+        
         .item_img_1 {
             background-image: url('http://localhost/corpofalcon/wp-content/uploads/2023/12/pexels-anna-shvets-4482900-scaled.jpg');
         }

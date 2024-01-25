@@ -27,7 +27,7 @@
 					</div>
 					<div class="w-full md:w-1/4 p-3">
 					<div class="w-full flex flex-wrap px-3 py-4">
-							<div class="text-xl mb-4">
+							<div class="w-full text-xl mb-4">
 								<h3>Servicios</h3>
 							</div>
 							<?php wp_nav_menu( array( 'theme_location' => 'max_mega_menu_3' ) ); ?>
