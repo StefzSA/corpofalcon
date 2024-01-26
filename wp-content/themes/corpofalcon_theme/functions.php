@@ -142,6 +142,7 @@ function megamenu_add_theme_default_1706113488($themes) {
 }
 add_filter("megamenu_themes", "megamenu_add_theme_default_1706113488");
 
+/* Start of the register for the local version of the ACF*/ 
 if( function_exists('acf_add_local_field_group') ):
 
     acf_add_local_field_group(array(
@@ -283,3 +284,4 @@ if( function_exists('acf_add_local_field_group') ):
     ));
     
     endif;		
+    /* End of the register for the local version of the ACF*/ 
