@@ -14,7 +14,7 @@ $home_var = get_fields();
     include_once(PARTS_DIR .'/home/hero-transition.php'); 
     include_once(PARTS_DIR .'/home/section-1.php');
     include_once(PARTS_DIR .'/home/section-2.php'); 
-    //include_once(PARTS_DIR .'/home/section-3.php');
+    include_once(PARTS_DIR .'/home/section-3.php');
     include_once(PARTS_DIR .'/home/section-4.php'); 
     ?>
 </main>

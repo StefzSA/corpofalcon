@@ -668,8 +668,8 @@ video {
   width: 100%;
 }
 
-.basis-full {
-  flex-basis: 100%;
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-col {
@@ -813,10 +813,6 @@ video {
   font-weight: 700;
 }
 
-.uppercase {
-  text-transform: uppercase;
-}
-
 .tracking-wide {
   letter-spacing: 0.025em;
 }
@@ -931,6 +927,82 @@ main {
 /***************** GENERAL *****************/
 
 /***************** COMPONENTS *****************/
+
+.carousel {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  .carousel-items {
+    position: relative
+  }
+  .carousel-items {
+    min-height: 400px;
+  }
+  .carousel-items {
+    .carousel-item {
+      &:not(.active) {
+        position: absolute;
+      }
+      &:not(.active) {
+        display: flex;
+      }
+      &:not(.active) {
+        min-height: 400px;
+      }
+      &:not(.active) {
+        width: 100%;
+      }
+      &:not(.active) {
+        flex-wrap: wrap;
+      }
+      &:not(.active) {
+        align-items: center;
+      }
+      &:not(.active) {
+        justify-content: center;
+      }
+      &.active {
+        position: absolute;
+      }
+      &.active {
+        display: flex;
+      }
+      &.active {
+        min-height: 400px;
+      }
+      &.active {
+        width: 100%;
+      }
+      &.active {
+        flex-wrap: wrap;
+      }
+      &.active {
+        align-items: center;
+      }
+      &.active {
+        justify-content: center;
+      }
+    }
+  }
+  .controls {
+    .dots {
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: all 0.6s ease-in-out;
+      }
+      .dot.active {
+        cursor: cursor;
+        background-color: #000;
+      }
+    }
+  }
+}
 
 .cta {
   display: flex;
