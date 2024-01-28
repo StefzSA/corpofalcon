@@ -3,7 +3,7 @@ module.exports = {
   content: [
     "./*.{php,html,js}",
     "templates/*.{php,html,js}",
-    "templates/template-parts/*.{php,html,js}",
+    "templates/template-parts/*/*.{php,html,js}",
   ],
   theme: {
     extend: {},
@@ -36,7 +36,8 @@ module.exports = {
         400: "#545454",
         500: "#292929",
       },
-      white: "#ffffff",
+      white: "#FAFBF6",
+      twhite: "#FFFFFF",
       transparent: "transparent",
     },
   },

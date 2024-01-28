@@ -9,21 +9,23 @@ All you need to change is probably here, style.css is only for WordPress to get 
 @tailwind utilities;
 
 /***************** GENERAL *****************/
-@import url("https://fonts.cdnfonts.com/css/poppins");
 
 body,
 main {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montreal", sans-serif;
   min-height: 99vh;
   overflow-x: hidden;
 }
 
 main {
   margin-top: 93px;
+  @media only screen and (max-width: 480px) {
+    margin-top: 150px;
+  }
 }
 
 .container {
-  @apply lg:max-w-screen-xl;
+  max-width: 1140px;
 }
 /***************** GENERAL *****************/
 
@@ -39,7 +41,7 @@ main {
   }
 
   .logo {
-    background-image: url(http://localhost/corpofalcon/wp-content/uploads/2023/12/Remove-bg.ai_1701878435680.png);
+    background-image: url(http://localhost/corpofalcon/wp-content/uploads/2024/01/logo_header.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -61,29 +63,65 @@ main {
 /***************** GENERAL *****************/
 
 /***************** COMPONENTS *****************/
-
-.cta {
-  @apply flex justify-center md:justify-start;
-  > button {
+.carousel {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  .carousel-items {
     position: relative;
-    padding: 10px 15px;
-    height: 50px;
+    @apply min-h-[400px];
+    .carousel-item {
+      &:not(.active) {
+        position: absolute;
+        @apply w-full min-h-[400px] flex flex-wrap items-center justify-center;
+      }
+      &.active {
+        position: absolute;
+        @apply w-full min-h-[400px] flex flex-wrap items-center justify-center;
+      }
+    }
+  }
+  .controls {
+    .dots {
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: all 0.6s ease-in-out;
+      }
+      .dot.active {
+        cursor: cursor;
+        background-color: #000;
+      }
+    }
+  }
+}
+.cta {
+  @apply flex justify-center md:justify-start text-white;
+  > a {
+    border-radius: 50px;
+    position: relative;
+    padding: 12px 24px;
+    min-height: 50px;
     min-width: 100px;
-    border: 3px 0px 3px 0px solid;
     transition: 0.4s all ease-in-out;
     font-weight: 600;
-    @apply border-secondary-500 bg-secondary-500 text-primary-100;
+    @apply border-secondary-500 bg-secondary-500;
   }
-  > button:hover {
+  > a:hover {
     transform: translateY(-5px);
-    @apply bg-secondary-500 text-primary-100;
+    @apply bg-secondary-500;
   }
 
-  > button::after {
+  > a::after {
     position: absolute;
     content: "";
     width: 0%;
-    height: 4px;
+    height: 3px;
     left: 50%;
     bottom: -1px;
     z-index: 99;
@@ -91,10 +129,11 @@ main {
     transition: 0.5s all ease-in-out;
     @apply bg-tertiary-500;
   }
-  > button:hover::after {
-    bottom: -1px;
-    width: 100%;
-    left: 0%;
+  > a:hover::after {
+    border-radius: 0px 0px 10px 10px;
+    bottom: 0px;
+    width: 84%;
+    left: 7.6%;
     z-index: 99;
     transition: 0.5s all ease-in-out;
     @apply bg-tertiary-500;
@@ -106,62 +145,52 @@ main {
 /***************** HOME *****************/
 
 #home {
+  @apply bg-white;
   /****** VAR DEFINITION ******/
   --height-hero: 900px;
-  --height-hero-mb: 700px;
+  --height-hero-mb: 600px;
   /****** VAR DEFINITION ******/
-
-  #hero-section.img-bg {
+  .overlay.light {
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(
+      0deg,
+      rgba(69, 136, 246, 0.3491771708683473) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    height: calc(var(--height-hero) + 15%);
+    @media only screen and (max-width: 480px) {
+      height: calc(var(--height-hero-mb) + 25px);
+    }
+  }
+  #hero-section {
     position: relative;
-    background-image: url(http://localhost/corpofalcon/wp-content/uploads/2023/12/medanos.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
     width: 100%;
     height: var(--height-hero);
     @media only screen and (max-width: 480px) {
       height: var(--height-hero-mb);
     }
-  }
-
-  #hero-section.img-bg:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.7;
-    z-index: 1;
-    @apply bg-primary-500;
-  }
-
-  #hero-section {
-    overflow: hidden;
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-
-    > .overlay {
-      z-index: 1;
+    > .img-bg {
       position: absolute;
-      width: 100%;
-      height: var(--height-hero);
-      @media only screen and (max-width: 480px) {
-        height: var(--height-hero-mb);
-      }
-
-      .mask {
-        transform: translateY(60%);
-        display: flex;
-        justify-content: end;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      width: 120%;
+      height: 140%;
+      left: 0%;
+      &:before {
+        content: "";
+        position: absolute;
         width: 100%;
-        height: var(--height-hero);
-        mask-image: url(http://localhost/corpofalcon/wp-content/uploads/2023/12/triangle-shape.svg);
-        mask-size: cover;
-        @apply bg-secondary-500;
-        right: 0;
+        height: 100%;
+        opacity: 0.3;
+        z-index: 1;
       }
     }
-
     .columns {
       z-index: 1;
       height: var(--height-hero);
@@ -176,70 +205,71 @@ main {
 
       .title {
         animation: FadeInDown 2s ease-in-out;
-        @apply px-4 md:px-0 text-center md:text-left text-[2.2rem] md:text-[6rem] font-bold text-tertiary-500;
+        @apply px-4 md:px-0 text-center md:text-left text-6xl md:text-8xl font-bold text-tertiary-500 leading-none;
       }
 
       .description {
         opacity: 0;
         animation: FadeInLeft 2s ease-in-out forwards 1.5s;
         font-size: 1.5rem;
-        @apply px-4 md:px-0 text-center md:text-left text-primary-100 w-full md:w-10/12;
+        @apply px-4 md:px-0 text-center md:text-left text-dark_component-500 w-full md:w-10/12;
       }
       > div {
         @apply py-5;
       }
     }
   }
+  .section_transition {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    @media only screen and (max-width: 480px) {
+      min-height: 100px;
+    }
+  }
 
   #section_1 {
-    @apply bg-dark_component-500;
     position: relative;
     width: 100%;
     display: flex;
-    min-height: 700px;
-
-    .section_transition {
-      height: 100%;
-      z-index: 0;
-
-      .custom-shape-divider-top-1702052748 {
-        position: absolute;
-        top: 0;
-        width: 180%;
-        left: -5%;
-        overflow: hidden;
-        line-height: 0;
-        @apply fill-secondary-500;
-      }
-    }
-
+    min-height: 500px;
     .section_wrap {
-      margin-top: 12rem;
-      margin-bottom: 12rem;
+      margin-top: 32px;
+      margin-bottom: 96px;
       z-index: 1;
       display: flex;
 
       .section_content {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
-        gap: 40px;
+        justify-content: space-evenly;
         width: 100%;
 
+        .item_wrap > *:first-child {
+          position: absolute;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: calc(100% - 4px);
+          width: calc(100% - 4px);
+          overflow: hidden;
+        }
         .item_wrap {
           overflow: hidden;
           padding: 3px 3px;
-          @apply flex items-center justify-center;
+          @apply flex items-center justify-center mb-8;
           position: relative;
-          transition:all .3s ease-in-out;
+          transition: all 0.3s ease-in-out;
 
-          .item_icon{
+          .item_icon {
+            position: absolute;
             width: 100%;
             height: 100%;
-            position: absolute;
-            transition: all .3s ease-in-out;
-            text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
-            @apply flex justify-center items-center text-9xl text-tertiary-500;
+            transition: all 0.3s ease-in-out;
+            text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+            @apply justify-center hidden md:flex items-center text-8xl text-tertiary-500;
           }
 
           .overlay {
@@ -247,15 +277,29 @@ main {
             position: absolute;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgba(0, 0, 0, 0.6);
             opacity: 1;
             backdrop-filter: blur(2px);
             transition: all 0.5s ease-in-out;
           }
-
-          .item_content {
+          .item_title {
+            z-index: 1;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
             transition: all 0.5s ease-in-out;
-            transform: translateY(150%);
+            min-height: 100px;
+            width: 100%;
+            padding: 2rem 1.2rem !important;
+            text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+            @apply text-center text-3xl font-bold text-tertiary-500;
+            > h3 {
+              width: 100%;
+              min-height: 100px;
+            }
+          }
+          .item_content {
             z-index: 99;
             min-height: 450px;
             @apply text-dark_component-500 bg-transparent flex justify-center flex-col;
@@ -264,55 +308,72 @@ main {
               width: 100%;
             }
 
-            > .item_title {
-              min-height: 100px;
-              width: 100%;
-              padding: 0px 15px;
-              @apply text-center text-2xl font-bold text-secondary-400 py-4;
-            }
-
             > .item_description {
+              padding: 1rem 1.2rem;
               font-weight: 500;
-              padding: 0px 15px;
               width: 100%;
               min-height: 200px;
               @apply text-justify text-white pt-0;
 
-              .item_highlight{
+              .item_highlight {
                 @apply text-tertiary-500 font-bold text-lg;
               }
             }
           }
         }
-        .item_wrap:hover .item_icon{
-          opacity: 0;
-        }
-        .item_wrap:hover .overlay {
-          z-index: 0;
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          background-color: rgba(0, 0, 0, 0.7);
-          opacity: 1;
-          backdrop-filter: blur(4px);
-          transition: all 0.5s ease-in-out;
-        }
-        .item_wrap:hover .item_content {
-          transition: all 0.5s ease-in-out;
-          transform: translateY(0%);
-          z-index: 99;
-          @apply text-dark_component-500;
-        }
-        .item_wrap:hover{
-          transform: translateY(-3%);
-          transition:all .3s ease-in-out;
-        }
-        .item_wrap::before {
-          content: "";
-          animation: border_contract 0.3s reverse ease-in-out;
-        }
-        .item_wrap:hover::before {
-          animation: border_expand 0.3s forwards ease-in-out normal;
+
+        /*Devices with hover*/
+        @media (hover: hover) {
+          .item_title {
+            > h3 {
+              transition: all 0.5s ease-in-out;
+              transform: translateY(300%);
+            }
+          }
+          .item_content {
+            transition: all 0.5s ease-in-out;
+            transform: translateY(150%);
+          }
+
+          .item_wrap:hover .item_icon {
+            opacity: 0;
+          }
+          .item_wrap:hover .item_title {
+            transition: all 0.5s ease-in-out;
+            @apply text-secondary-500;
+            > h3 {
+              transition: all 0.5s ease-in-out;
+              width: 100%;
+              transform: translateY(0%);
+            }
+          }
+          .item_wrap:hover .overlay {
+            z-index: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 1;
+            backdrop-filter: blur(6px);
+            transition: all 0.5s ease-in-out;
+          }
+          .item_wrap:hover .item_content {
+            transition: all 0.5s ease-in-out;
+            transform: translateY(0%);
+            z-index: 99;
+            @apply text-dark_component-500;
+          }
+          .item_wrap:hover {
+            transform: translateY(-3%);
+            transition: all 0.3s ease-in-out;
+          }
+          .item_wrap::before {
+            content: "";
+            animation: border_contract 1s reverse ease-in-out;
+          }
+          .item_wrap:hover::before {
+            animation: border_expand 0.4s forwards ease-in-out normal;
+          }
         }
       }
     }
@@ -390,7 +451,7 @@ main {
     left: 50%;
     z-index: -1;
     bottom: -2px;
-    @apply bg-tertiary-500;
+    @apply bg-secondary-500;
   }
 
   25% {
@@ -401,7 +462,7 @@ main {
     left: calc(0% - 2px);
     z-index: -1;
     bottom: -2px;
-    @apply bg-tertiary-500;
+    @apply bg-secondary-500;
   }
 
   100% {
@@ -412,7 +473,7 @@ main {
     left: calc(0% - 2px);
     z-index: -1;
     bottom: -2px;
-    @apply bg-tertiary-500;
+    @apply bg-secondary-500;
   }
 }
 
@@ -425,7 +486,7 @@ main {
     left: 50%;
     z-index: -1;
     bottom: -2px;
-    @apply bg-tertiary-500;
+    @apply bg-secondary-500;
   }
 
   25% {
@@ -436,7 +497,7 @@ main {
     left: calc(0% - 2px);
     z-index: -1;
     bottom: -2px;
-    @apply bg-tertiary-500;
+    @apply bg-secondary-500;
   }
 
   100% {
@@ -447,7 +508,7 @@ main {
     left: calc(0% - 2px);
     z-index: -1;
     bottom: -2px;
-    @apply bg-tertiary-500;
+    @apply bg-secondary-500;
   }
 }
 

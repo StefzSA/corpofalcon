@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Montreal";
+  src: local("Montreal"), local("Montreal"),
+    url("../fonts/Montreal-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montreal Bold";
+  src: local("Montreal-bold"), local("Montreal-bold"),
+    url("../fonts/Montreal-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
