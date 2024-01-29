@@ -16,9 +16,7 @@ if ($debug == 1) {
 
 // frontend script & style
 function assets_load_header_top()
-{   
-    wp_enqueue_script('jQuery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js');
-    wp_enqueue_script('Carousel',  get_template_directory_uri() . '/resources/js/carousel.js');
+{
     wp_enqueue_style('tailwind-css', get_template_directory_uri() . '/resources/css/tailwind/output.css');
     wp_enqueue_style('fontawesome6', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
     wp_enqueue_style('Font Include', get_template_directory_uri() . '/resources/css/font-include.css');
@@ -26,7 +24,11 @@ function assets_load_header_top()
 
 function assets_load_header_bottom()
 {
-    
+    wp_enqueue_script('jQuery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js');
+    if (is_page_template('templates/home.php')) {
+        wp_enqueue_script('Carousel', get_template_directory_uri() . '/resources/js/carousel.js');
+    }
+
 }
 
 function assets_load_footer()

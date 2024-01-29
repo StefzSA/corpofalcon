@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<div id="header" class="w-full m-auto z-10">
+	<div id="header" class="w-full m-auto z-30">
 		<div class="container w-full nav mx-auto">
 			<div class="w-full xl:w-2/12 justify-center md:justify-start logo_wrapper">
 				<a href="<?php echo home_url('/'); ?>">
