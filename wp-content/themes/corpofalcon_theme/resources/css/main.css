@@ -77,6 +77,11 @@ main {
       @apply w-full min-h-[500px] flex flex-wrap items-center;
       .inner-wrapper {
         .item-content {
+          .item-author{
+            .author-tag{
+              .author
+            }
+          }
         }
         .item-img {
           position: relative;
