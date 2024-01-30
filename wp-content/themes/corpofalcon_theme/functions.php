@@ -29,6 +29,7 @@ function assets_load_header_bottom()
         wp_enqueue_script('Carousel', get_template_directory_uri() . '/resources/js/carousel.js');
     }
 
+    wp_enqueue_script('modal', get_template_directory_uri(). '/resources/js/modal.js');
 }
 
 function assets_load_footer()

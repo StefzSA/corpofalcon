@@ -27,6 +27,7 @@ main {
 .container {
   max-width: 1140px;
 }
+
 /***************** GENERAL *****************/
 
 /***************** HEADER *****************/
@@ -60,6 +61,7 @@ main {
     min-height: 85px;
   }
 }
+
 /***************** GENERAL *****************/
 
 /***************** COMPONENTS *****************/
@@ -184,6 +186,7 @@ main {
     z-index: 1;
     width: 100%;
     height: var(--height-hero);
+
     @media only screen and (max-width: 480px) {
       height: var(--height-hero-mb);
     }
@@ -207,10 +210,12 @@ main {
     .columns {
       z-index: 1;
       height: var(--height-hero);
+
       @media only screen and (max-width: 480px) {
         height: var(--height-hero-mb);
       }
     }
+
     .left {
       display: flex;
       flex-wrap: wrap;
@@ -227,7 +232,8 @@ main {
         font-size: 1.5rem;
         @apply px-4 md:px-0 text-center md:text-left text-dark_component-500 w-full md:w-10/12;
       }
-      > div {
+
+      >div {
         @apply py-5;
       }
     }
@@ -401,21 +407,76 @@ main {
 }
 /***************** HOME *****************/
 
+/***************** MODAL *****************/
+.modalDialog {
+  display: none;
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	pointer-events: auto;
+  backdrop-filter: blur(1px);
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { background: #00d9ff; }
+
+/***************** MODAL *****************/
+
 /***************** ANIMATIONS *****************/
 
 /******** PROPERTIES ********/
 .anim_delay-250ms {
   animation-delay: 0.25s;
 }
+
 .anim_delay-500ms {
   animation-delay: 0.5s;
 }
+
 .anim_delay-750ms {
   animation-delay: 0.75s;
 }
+
 .anim_delay-1s {
   animation-delay: 1s;
 }
+
 /******** PROPERTIES ********/
 
 /******** BASIC ********/
@@ -424,36 +485,43 @@ main {
     transform: translateX(-150%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0%);
     opacity: 1;
   }
 }
+
 @keyframes FadeInRight {
   from {
     transform: translateX(150%);
     opacity: 0;
   }
+
   to {
     transform: translateX(0%);
     opacity: 1;
   }
 }
+
 @keyframes FadeInDown {
   from {
     transform: translateY(-150%);
     opacity: 0;
   }
+
   to {
     transform: translateY(0%);
     opacity: 1;
   }
 }
+
 @keyframes FadeInUp {
   from {
     transform: translateY(200%);
     opacity: 0;
   }
+
   to {
     transform: translateY(0%);
     opacity: 1;
