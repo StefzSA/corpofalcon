@@ -1,6 +1,6 @@
 <?php
 ?>
-<?php foreach($home_var['section_1_item'] as $section_1_item) { ?>
+<?php foreach ($home_var['section_1_item'] as $section_1_item) { ?>
     <style>
         #section_1 {
             .item_img {
@@ -12,39 +12,39 @@
 <div id="section_1">
     <div class="section_wrap container mx-auto w-full">
         <div class="section_content flex flex-wrap">
-            <?php if(!empty($home_var['section_1_heading'])) { ?>
+            <?php if (!empty($home_var['section_1_heading'])) { ?>
                 <div class="w-full">
                     <h2 class="w-full font-bold text-3xl md:text-4xl text-secondary-500 text-center tracking-wide pb-16">
                         <?php echo $home_var['section_1_heading']; ?></h2>
                 </div>
             <?php } ?>
-            <?php 
-            if(!empty($home_var['section_1_item'])) { 
-                foreach($home_var['section_1_item'] as $section_1_item) { 
+            <?php
+            if (!empty($home_var['section_1_item'])) {
+                foreach ($home_var['section_1_item'] as $section_1_item) {
             ?>
-                <a href="<?php echo $section_1_item['link']; ?>" class="w-10/12 md:w-[29%]">
-                    <div class="item_wrap w-full">
-                        <div class="item_img">
-                            <div class="overlay"></div>
-                            <div class="item_title">
-                                <h3><?php echo $section_1_item['title']; ?></h3>
+                    <a href="<?php echo $section_1_item['link']; ?>" class="w-10/12 md:w-[29%]">
+                        <div class="item_wrap w-full">
+                            <div class="item_img">
+                                <div class="overlay"></div>
+                                <div class="item_title">
+                                    <h3><?php echo $section_1_item['title']; ?></h3>
+                                </div>
+                                <div class="item_icon">
+                                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                                </div>
                             </div>
-                            <div class="item_icon">
-                                <i class="fa-solid fa-hand-holding-dollar"></i>
+                            <div class="item_content">
+                                <div class="item_description">
+                                    <p><span class="item_highlight"><?php echo $section_1_item['paragraph_highlight']; ?></span>
+                                        <?php echo $section_1_item['paragraph']; ?></p>
+                                </div>
                             </div>
                         </div>
-                        <div class="item_content">
-                            <div class="item_description">
-                                <p><span class="item_highlight"><?php echo $section_1_item['paragraph_highlight']; ?></span>
-                                <?php echo $section_1_item['paragraph']; ?></p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            <?php   
-                } 
-            } 
-            ?> 
+                    </a>
+            <?php
+                }
+            }
+            ?>
             <!-- <a href="#" class="w-10/12 md:w-[29%]">
                 <div class="item_wrap w-full">
                     <div class="item_img_2">

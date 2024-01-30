@@ -1,123 +1,102 @@
 <div id="section_3">
-    <div class="container mx-auto w-full py-24">
-        <div class="flex flex-wrap justify-center">
-            <div id="items" class="flex items-center basis-full overflow-hidden relative">
-                <div id="item" class="w-full min-h-[400px]">
-                    <div id="paragraph">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic id in error officiis vero nobis unde vel, consequuntur velit incidunt voluptatem exercitationem numquam accusamus dolores deleniti optio, ratione ipsa quia.</p>
-                    </div>
+  <div class="container mx-auto w-full py-24">
+    <div class="flex flex-wrap justify-center">
+      <div id="testimonials" class="carousel w-full flex flex-wrap relative">
+        <div class="carousel-items relative w-full">
 
-                    <div id="author" class="w-full">
-                        Stefano
-                    </div>
+          <div class="carousel-item active w-full">
+            <div class="inner-wrapper relative flex items-center">
+
+              <div class="item-content h-full w-2/3 p-8">
+                <div id="item-paragraph" class="text-2xl leading-relaxed ">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic id in error officiis vero nobis unde
+                    vel,
+                    consequuntur velit incidunt voluptatem exercitationem numquam accusamus dolores deleniti optio,
+                    ratione
+                    ipsa quia. 1</p>
                 </div>
-
-                <div id="item" class="w-full min-h-[400px]">
-                    <div id="paragraph">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic id in error officiis vero nobis unde vel, consequuntur velit incidunt voluptatem exercitationem numquam accusamus dolores deleniti optio, ratione ipsa quia.</p>
-                    </div>
-
-                    <div id="author">
-                        Stefano
-                    </div>
+                <div class="item-author flex flex-wrap items-center md:translate-y-24 ">
+                  <div class="author-img">
+                    <img class="rounded-full max-h-12 max-w-12 object-cover aspect-square" src="http://localhost/corpofalcon/wp-content/uploads/2024/01/fitgirl-1.png" alt="">
+                  </div>
+                  <div class="author-tag ml-2 flex flex-col items-center">
+                    <span class="author-name text-secondary-400">Stefano Strippoli</span>
+                    <span class="author-role text-sm text-dark_component-300">Main Developer</span>
+                  </div>
                 </div>
+              </div>
+
+              <div class="item-img w-1/3">
+                <div class="square"></div>
+                <img class="z-10 relative" src="http://localhost/corpofalcon/wp-content/uploads/2024/01/fitgirl-1.png" alt="fitgirl">
+              </div>
+
             </div>
-            <div id="controls">
-                <div class="dots">
+          </div>
+          <div class="carousel-item w-full">
+            <div class="inner-wrapper relative flex items-center">
 
+              <div class="item-content h-full w-2/3 p-8">
+                <div id="item-paragraph" class="text-2xl leading-relaxed ">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic id in error officiis vero nobis unde
+                    vel,
+                    consequuntur velit incidunt voluptatem exercitationem numquam accusamus dolores deleniti optio,
+                    ratione
+                    ipsa quia. 1</p>
                 </div>
+                <div class="item-author flex flex-wrap items-center md:translate-y-24 ">
+                  <div class="author-img">
+                    <img class="rounded-full max-h-16 max-w-16 object-cover aspect-square" src="http://localhost/corpofalcon/wp-content/uploads/2024/01/fitgirl-1.png" alt="">
+                  </div>
+                  <div class="author-tag ml-2 flex flex-col items-center">
+                    <span class="author-name text-secondary-400">Stefano Strippoli</span>
+                    <span class="author-role text-sm text-dark_component-300">Main Developer</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item-img w-1/3">
+                <div class="square"></div>
+                <img class="z-10 relative" src="http://localhost/corpofalcon/wp-content/uploads/2024/01/fitgirl-1.png" alt="fitgirl">
+              </div>
+
             </div>
+          </div>
+          <div class="carousel-item w-full">
+            <div class="inner-wrapper relative flex items-center">
+
+              <div class="item-content h-full w-2/3 p-8">
+                <div id="item-paragraph" class="text-2xl leading-relaxed ">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic id in error officiis vero nobis unde
+                    vel,
+                    consequuntur velit incidunt voluptatem exercitationem numquam accusamus dolores deleniti optio,
+                    ratione
+                    ipsa quia. 1</p>
+                </div>
+                <div class="item-author flex flex-wrap items-center md:translate-y-24 ">
+                  <div class="author-img">
+                    <img class="rounded-full max-h-16 max-w-16 object-cover aspect-square" src="http://localhost/corpofalcon/wp-content/uploads/2024/01/fitgirl-1.png" alt="">
+                  </div>
+                  <div class="author-tag ml-2 flex flex-col items-center">
+                    <span class="author-name">Stefano Strippoli</span>
+                    <span class="author-role">Main Developer</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item-img w-1/3">
+                <div class="square"></div>
+                <img class="z-10 relative" src="http://localhost/corpofalcon/wp-content/uploads/2024/01/fitgirl-1.png" alt="fitgirl">
+              </div>
+
+            </div>
+          </div>
         </div>
+        <div class="controls w-full">
+          <div class="dots flex flex-wrap justify-center">
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
-
-<script>
-{
-  const sliders = document.querySelectorAll(".item");
-  // interval between switching images
-  // can't be less than your animation duration in css!
-  const interval = 2800;
-  // if you don't want to first animation last longer than other animations  
-  // set animDuration (in miliseconds) to your value of animation duration in css
-  const animDuration = 600;
-
-  for (let i = 0; i < sliders.length; ++i) {
-    const slider = sliders[i];
-    const dots = slider.querySelector(".dots");
-    const sliderImgs = slider.querySelectorAll(".item");
-
-    let currImg = 0;
-    let prevImg = sliderImgs.length - 1;
-    let intrvl;
-    let timeout;
-
-    // Creates dots and add listeners to them
-    for (let i = 0; i < sliderImgs.length; ++i) {
-      const dot = document.createElement("div");
-      dot.classList.add("dot");
-      dots.appendChild(dot);
-      dot.addEventListener("click", dotClick.bind(null, i), false);
-    }
-
-    const allDots = dots.querySelectorAll(".dot");
-    allDots[0].classList.add("active-dot");
-
-    sliderImgs[0].style.left = "0";
-    timeout = setTimeout(() => {
-      animateSlider();
-      sliderImgs[0].style.left = "";
-      intrvl = setInterval(animateSlider, interval);
-    }, interval - animDuration);   
-
-    /**
-     * Animates images
-     * @param {number} [nextImg] - index of next image to show
-     * @param {boolean} [right = false] - animate to right
-     */
-
-    function animateSlider(nextImg, right) {
-      if (!nextImg)
-        nextImg = currImg + 1 < sliderImgs.length ? currImg + 2 : 1;
-
-      --nextImg;
-      sliderImgs[prevImg].style.animationName = "";
-
-      if (!right) {
-        sliderImgs[nextImg].style.animationName = "leftNext";
-        sliderImgs[currImg].style.animationName = "leftCurr";
-      } 
-      else {
-        sliderImgs[nextImg].style.animationName = "rightNext";
-        sliderImgs[currImg].style.animationName = "rightCurr";
-      }
-
-      prevImg = currImg;
-      currImg = nextImg;
-
-      currDot = allDots[currImg];
-      currDot.classList.add("active-dot");
-      prevDot = allDots[prevImg];
-      prevDot.classList.remove("active-dot");
-    }
-
-    /**
-     * Decides if animate to left or right and highlights clicked dot
-     * @param {number} num - index of clicked dot
-     */
-    function dotClick(num) {
-      if (num == currImg)
-        return false;
-
-      clearTimeout(timeout);
-      clearInterval(intrvl);
-
-      if (num > currImg)
-        animateSlider(num + 1);
-      else
-        animateSlider(num + 1, true);
-
-      intrvl = setInterval(animateSlider, interval);
-    }
-  }
-}
-</script>
