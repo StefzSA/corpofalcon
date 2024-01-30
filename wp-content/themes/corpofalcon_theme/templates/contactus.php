@@ -36,7 +36,7 @@ get_header();
                         <a href="tel:+58412-122-312" class="p-2">Tel: 0412-435-23-42</a>
                         <p>Correo: emprende@connosotros.com</p>
                     </div>
-                    <button class="open_modal flex w-[60%] justify-center mt-9 text-white py-[10px] bg-secondary-500 rounded-md mx-auto">Obtener informacion</button>
+                    <button class="open_modal flex w-[60%] justify-center mt-9 text-white py-[10px] bg-secondary-500 rounded-md mx-auto" data-type="1">Obtener informacion</button>
                 </div>
             <?php } ?>
         </div>
@@ -50,7 +50,6 @@ get_header();
         <div id="modalWindow">
             <button id="close_modal" class="close">X</button>
             <div id="form_section" class="w-full flex justify-center mt-8">
-                <?php echo apply_shortcodes('[contact-form-7 id="8001c47" title="Contact form 1"]'); ?>
             </div>
         </div>
     </div>
