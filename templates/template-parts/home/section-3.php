@@ -4,7 +4,7 @@
       <div id="testimonials" class="carousel w-full flex flex-wrap relative">
         <div class="carousel-items relative w-full">
 
-        <div class="carousel-item active w-full">
+          <div class="carousel-item active w-full">
             <div class="inner-wrapper relative flex items-center">
 
               <div class="item-content h-full w-2/3 p-8">
@@ -17,7 +17,7 @@
                 </div>
                 <div class="item-author flex flex-wrap items-center md:translate-y-24 ">
                   <div class="author-img">
-                    <img class="rounded-full max-h-16 max-w-16 object-cover aspect-square" src="http://localhost/corpofalcon/wp-content/uploads/2024/01/fitgirl-1.png" alt="">
+                    <img class="rounded-full max-h-12 max-w-12 object-cover aspect-square" src="http://localhost/corpofalcon/wp-content/uploads/2024/01/fitgirl-1.png" alt="">
                   </div>
                   <div class="author-tag ml-2 flex flex-col items-center">
                     <span class="author-name text-secondary-400">Stefano Strippoli</span>

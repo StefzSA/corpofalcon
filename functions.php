@@ -4,7 +4,20 @@ define("GET_DIR", get_template_directory());
 define("TEMPLATES_DIR", GET_DIR . '/templates');
 define("PARTS_DIR", TEMPLATES_DIR . '/template-parts');
 define("INCLUDES_DIR", GET_DIR . '/includes');
+//MEGA MENU AND ACF
+define( 'THEME_MEGAMENU_STYLES', get_stylesheet_directory() . '/includes/inc.megamenu_themes.php' );
+define( 'THEME_ACF', get_stylesheet_directory() . '/includes/acf/' );
 
+/* Debug directories*/
+$debug = 0;
+if ($debug == 1) {
+    echo GET_DIR . '<br>';
+    echo TEMPLATES_DIR . '<br>';
+    echo PARTS_DIR . '<br>';
+    echo INCLUDES_DIR . '<br>';
+    echo THEME_MEGAMENU_STYLES . '<br>';
+    echo THEME_ACF . '<br>';
+}
 /* Debug directories*/
 $debug = 0;
 if ($debug == 1) {
@@ -51,9 +64,19 @@ function plugins_setup()
     include_once(INCLUDES_DIR . '/inc.megamenu_themes.php');
 }
 
+function load_theme_acfs( $paths ){
+    unset($paths[0]);
+    $paths[] = THEME_ACF;
+	return $paths;
+}
 
+function save_theme_acfs( $path ) {
+    return THEME_ACF;
+}
 
 add_action('after_setup_theme', 'plugins_setup');
+add_filter('acf/settings/save_json', 'save_theme_acfs' );
+add_filter('acf/settings/load_json', 'load_theme_acfs' );
 add_action('wp_enqueue_scripts', 'assets_load_header_top');
 add_action('wp_footer', 'assets_load_footer');
 
@@ -68,7 +91,6 @@ function modalAjax()
         'action' => 'modal_controller'
     ));
 }
-
 function contact_form()
 {
     $nonce = sanitize_text_field($_POST['nonce']);
