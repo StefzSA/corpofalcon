@@ -1527,10 +1527,6 @@ video {
   background-color: rgb(250 251 246 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'http\:\/\/localhost\/corpofalcon\/wp-content\/uploads\/2023\/12\/medanos\.jpg\'\)\]{
-  background-image: url('http://localhost/corpofalcon/wp-content/uploads/2023/12/medanos.jpg');
-}
-
 .bg-\[url\(\'http\:\/\/localhost\/corpofalcon\/wp-content\/uploads\/2024\/01\/medanos\.jpg\'\)\]{
   background-image: url('http://localhost/corpofalcon/wp-content/uploads/2024/01/medanos.jpg');
 }
@@ -1623,12 +1619,20 @@ video {
   padding-top: 2.5rem;
 }
 
+.text-left{
+  text-align: left;
+}
+
 .\!text-center{
   text-align: center !important;
 }
 
 .text-center{
   text-align: center;
+}
+
+.text-right{
+  text-align: right;
 }
 
 .text-2xl{

@@ -11,10 +11,15 @@
         $('.open_modal').on('click', function () {
             let data = $(this).data('dep');
             $('body').css('overflow-y', 'hidden');
+            console.log(modal_ajax.url);
             $.ajax({
                 type: 'post',
                 url: modal_ajax.url,
-                data: 'action=' + modal_ajax.action + '&nonce=' + modal_ajax.nonce + '&type=' + data ,
+                data: {
+                    action: modal_ajax.action,
+                    nonce: modal_ajax.nonce,
+                    data: data
+                },
                 success: function (result) {
                     $('#form_section').html(result);
                 }

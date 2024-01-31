@@ -15,7 +15,7 @@
                     <p>Correo: emprende@connosotros.com</p>
                 </div>
                 <button
-                    class="open_modal flex w-[60%] justify-center mt-9 text-white py-[10px] bg-secondary-500 rounded-md mx-auto">Obtener
+                    class="open_modal flex w-[60%] justify-center mt-9 text-white py-[10px] bg-secondary-500 rounded-md mx-auto" data-dep="1">Obtener
                     informacion</button>
             </div>
         <?php } ?>

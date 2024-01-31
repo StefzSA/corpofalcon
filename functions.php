@@ -90,6 +90,7 @@ function contact_form()
         die();
     }
     if($_POST['type'] == 1){
+        header("Content-Type: text/html");
         echo apply_shortcodes('[contact-form-7 id="83a515c" title="Formulario de contacto 1"]');
     }
     wp_die();
