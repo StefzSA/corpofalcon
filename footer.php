@@ -1,3 +1,6 @@
+<?php
+$page_logo = get_field('logo', 'option');
+?>
 <div id="footer" class="bg-gradient-to-b from-white to-secondary-200 min-h-[400px] flex items-center">
 	<div class="container mx-auto">
 		<div class="w-full flex flex-wrap">
@@ -5,11 +8,11 @@
 				<div class="w-full flex flex-col flex-wrap text-base px-3 py-4">
 					<div class="mb-8 md:mb-4">
 						<img class="mx-auto md:mx-0 md:max-h-[128px] md:max-w-[128px]"
-							src="http://localhost/corpofalcon/wp-content/uploads/2024/01/logo_header-1-e1706108359631.png"
-							alt="Corpofalcon logo">
+							src="<?php echo $page_logo; ?>"
+							alt="Logotipo de la compañía">
 					</div>
 					<div class="text-xl mb-4">
-						<h3>Contactanos</h3>
+						<h3>Contáctanos</h3>
 					</div>
 					<div class="text-dark_component-400"><a href="tel:"></a></div>
 					<div class="w-8/12 text-secondary-500 mb-2">

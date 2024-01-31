@@ -6,8 +6,11 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<?php wp_head(); ?>
-
+	<?php 
+	wp_head(); 
+	$page_logo = get_field('logo', 'option');
+	?>
+	<style> #header{ .logo { background-image: url('<?php echo $page_logo; ?>'); } }</style>
 </head>
 
 <body>

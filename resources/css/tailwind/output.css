@@ -1779,7 +1779,6 @@ main {
     }
   }
   .logo {
-    background-image: url(http://localhost/corpofalcon/wp-content/uploads/2024/01/logo_header.png);
     background-repeat: no-repeat;
     background-size: 100%;
     @media only screen and (max-width: 768px) {
