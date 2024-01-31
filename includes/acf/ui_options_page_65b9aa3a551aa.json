@@ -1,0 +1,22 @@
+{
+    "key": "ui_options_page_65b9aa3a551aa",
+    "title": "Opciones del Tema",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Opciones del Tema",
+    "menu_slug": "theme-options",
+    "parent_slug": "none",
+    "advanced_configuration": 1,
+    "icon_url": "dashicons-cover-image",
+    "menu_title": "",
+    "position": 3,
+    "redirect": 0,
+    "description": "",
+    "update_button": "Actualizar",
+    "updated_message": "Opciones Actualizadas",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1706666638
+}

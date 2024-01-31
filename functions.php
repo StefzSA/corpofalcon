@@ -18,14 +18,6 @@ if ($debug == 1) {
     echo THEME_MEGAMENU_STYLES . '<br>';
     echo THEME_ACF . '<br>';
 }
-/* Debug directories*/
-$debug = 0;
-if ($debug == 1) {
-    echo GET_DIR . '<br>';
-    echo TEMPLATES_DIR . '<br>';
-    echo PARTS_DIR . '<br>';
-    echo INCLUDES_DIR . '<br>';
-}
 
 // frontend script & style
 function assets_load_header_top()

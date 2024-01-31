@@ -68,51 +68,53 @@ main {
 /******** MODAL ********/
 .modalDialog {
   display: none;
-	position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-	z-index: 99999;
-	pointer-events: auto;
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  pointer-events: auto;
   backdrop-filter: blur(1px);
 }
 .modalDialog:target {
-	opacity:1;
-	pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 .modalDialog > div {
-	width: 400px;
-	position: relative;
-	margin: 10% auto;
-	padding: 5px 20px 13px 20px;
-	border-radius: 10px;
-	background: #fff;
-	background: -moz-linear-gradient(#fff, #999);
-	background: -webkit-linear-gradient(#fff, #999);
-	background: -o-linear-gradient(#fff, #999);
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 5px 20px 13px 20px;
+  border-radius: 10px;
+  background: #fff;
+  background: -moz-linear-gradient(#fff, #999);
+  background: -webkit-linear-gradient(#fff, #999);
+  background: -o-linear-gradient(#fff, #999);
 }
 .close {
-	background: #606061;
-	color: #FFFFFF;
-	line-height: 25px;
-	position: absolute;
-	right: -12px;
-	text-align: center;
-	top: -10px;
-	width: 24px;
-	text-decoration: none;
-	font-weight: bold;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	border-radius: 12px;
-	-moz-box-shadow: 1px 1px 3px #000;
-	-webkit-box-shadow: 1px 1px 3px #000;
-	box-shadow: 1px 1px 3px #000;
+  background: #606061;
+  color: #ffffff;
+  line-height: 25px;
+  position: absolute;
+  right: -12px;
+  text-align: center;
+  top: -10px;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
 }
-.close:hover { background: #00d9ff; }
+.close:hover {
+  background: #00d9ff;
+}
 
 /******** MODAL ********/
 /******** CAROUSEL ********/
@@ -130,10 +132,9 @@ main {
       @apply w-full min-h-[500px] flex flex-wrap items-center;
       .inner-wrapper {
         .item-content {
-          .item-author{
-            .author-tag{
-              .author{
-                
+          .item-author {
+            .author-tag {
+              .author {
               }
             }
           }
@@ -149,21 +150,19 @@ main {
   }
   .controls {
     .dots {
-      @apply md:-translate-y-24 ;
+      @apply md:-translate-y-24;
       .dot {
-        aspect-ratio:4/4;
+        aspect-ratio: 4/4;
         cursor: pointer;
-        height: 15px;
-        width: 15px;
         margin: 0 3px;
         border-radius: 100%;
         display: inline-block;
         transition: all 0.6s ease-in-out;
-        @apply bg-secondary-300;
+        @apply bg-secondary-300 h-[30px] w-[30px] md:w-[15px] md:h-[15px];
       }
       .dot.active {
         cursor: unset;
-        @apply bg-secondary-500 scale-110 ;
+        @apply bg-secondary-500 scale-110;
       }
     }
   }
@@ -223,11 +222,7 @@ main {
   .overlay.light {
     position: absolute;
     width: 100%;
-    background: linear-gradient(
-      0deg,
-      rgba(69, 136, 246, 0.3491771708683473) 0%,
-      rgba(255, 255, 255, 1) 100%
-    );
+    @apply bg-gradient-to-b from-white to-secondary-200;
     height: calc(var(--height-hero) + 15%);
     @media only screen and (max-width: 480px) {
       height: calc(var(--height-hero-mb) + 25px);
@@ -278,7 +273,7 @@ main {
 
       .title {
         animation: FadeInDown 2s ease-in-out;
-        @apply px-4 md:px-0 text-center md:text-left text-6xl md:text-8xl font-bold text-tertiary-500 leading-none;
+        @apply px-4 md:px-0 text-center md:text-left text-2xl md:text-8xl font-bold text-tertiary-500 leading-none;
       }
 
       .description {
@@ -288,7 +283,7 @@ main {
         @apply px-4 md:px-0 text-center md:text-left text-dark_component-500 w-full md:w-10/12;
       }
 
-      >div {
+      > div {
         @apply py-5;
       }
     }
@@ -449,10 +444,19 @@ main {
             animation: border_expand 0.4s forwards ease-in-out normal;
           }
         }
+        @media (hover: none) {
+          .item_wrap::before {
+            content: "";
+            animation: border_contract 1s reverse ease-in-out;
+          }
+          .item_wrap::before {
+            animation: border_expand 0.4s forwards ease-in-out normal;
+          }
+        }
       }
     }
   }
-  #section_3{
+  #section_3 {
     .square {
       height: 100%;
       width: 100%;
@@ -489,6 +493,9 @@ main {
 }
 
 .container {
+  @media only screen and (max-width: 768px) {
+    padding:0px 16px 0px 16px;
+  }
   max-width: 1140px;
 }
 /***************** GENERAL *****************/
@@ -508,6 +515,9 @@ main {
     background-image: url(http://localhost/corpofalcon/wp-content/uploads/2024/01/logo_header.png);
     background-repeat: no-repeat;
     background-size: 100%;
+    @media only screen and (max-width: 768px) {
+      background-size: 70%;
+    }
     background-position: center;
     width: 100%;
     height: 100%;
@@ -553,9 +563,9 @@ main {
   }
   .controls {
     .dots {
-      @apply md:-translate-y-24 ;
+      @apply md:-translate-y-24;
       .dot {
-        aspect-ratio:4/4;
+        aspect-ratio: 4/4;
         cursor: pointer;
         height: 15px;
         width: 15px;
@@ -567,7 +577,7 @@ main {
       }
       .dot.active {
         cursor: unset;
-        @apply bg-secondary-500 scale-110 ;
+        @apply bg-secondary-500 scale-110;
       }
     }
   }
@@ -625,11 +635,7 @@ main {
   .overlay.light {
     position: absolute;
     width: 100%;
-    background: linear-gradient(
-      0deg,
-      rgba(69, 136, 246, 0.3491771708683473) 0%,
-      rgba(255, 255, 255, 1) 100%
-    );
+    @apply bg-gradient-to-b from-white to-secondary-200;
     height: calc(var(--height-hero) + 15%);
     @media only screen and (max-width: 480px) {
       height: calc(var(--height-hero-mb) + 25px);
@@ -677,7 +683,7 @@ main {
 
       .title {
         animation: FadeInDown 2s ease-in-out;
-        @apply px-4 md:px-0 text-center md:text-left text-6xl md:text-8xl font-bold text-tertiary-500 leading-none;
+        @apply px-4 md:px-0 text-center md:text-left !text-5xl md:!text-8xl font-bold text-tertiary-500 leading-none;
       }
 
       .description {
@@ -850,7 +856,7 @@ main {
       }
     }
   }
-  #section_3{
+  #section_3 {
     .square {
       height: 100%;
       width: 100%;
@@ -992,7 +998,6 @@ main {
 }
 
 /***************** Animations *****************/
-
 
 /***************** ANIMATIONS *****************/
 
