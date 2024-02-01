@@ -4,9 +4,20 @@ module.exports = {
     "./*.{php,html,js}",
     "templates/*.{php,html,js}",
     "templates/template-parts/*/*.{php,html,js}",
+    "includes/*.{php,html,js}",
   ],
   theme: {
     extend: {},
+    container: {
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      },
+      center: true,
+    },
     colors: {
       primary: {
         100: "#dddddd",
@@ -41,5 +52,8 @@ module.exports = {
       transparent: "transparent",
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss/nesting')(require('postcss-nesting')),
+    require('tailwindcss')
+  ],
 };
