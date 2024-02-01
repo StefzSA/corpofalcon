@@ -20,6 +20,8 @@ function openModal() {
       },
       success: function (result) {
         $("#modalWindow").find('#form_section').html(result);
+        $form = $('.wpcf7-form').eq(0);
+        wpcf7.init($form[0]);
       },
     });
     $("#openModal").fadeIn();

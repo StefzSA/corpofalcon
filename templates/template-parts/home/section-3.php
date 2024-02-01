@@ -18,8 +18,8 @@
                   <p><?php echo $item['quote'];?></p>
                 </div>
                 <div class="item-author flex flex-wrap items-center justify-center md:justify-normal translate-y-10 md:translate-y-24">
-                  <div class="author-img">
-                    <img class="rounded-full max-h-12 max-w-12 object-cover aspect-square" src="<?php echo $item['author_image'];?>" alt="<?php echo $item['author_name'].' Portrait'; ?>">
+                  <div class="author-img h-[48px] w-[48px]">
+                    <img class="rounded-full h-[48px] w-[48px] object-cover aspect-square" src="<?php echo $item['author_image'];?>" alt="<?php echo $item['author_name'].' Portrait'; ?>">
                   </div>
                   <div class="author-tag ml-2 flex flex-col items-center md:items-start">
                     <span class="author-name text-secondary-400"><?php echo $item['author_name']; ?></span>
