@@ -32,7 +32,7 @@ if (!empty($template_fields['section_1_item'])) {
                         <div class="item_wrap w-full">
                             <div class="item_img_<?php echo $i; ?>">
                                 <div class="overlay"></div>
-                                <div class="item_title">
+                                <div class="item_title text-center text-2xl md:text-3xl text-tertiary-500">
                                     <h3>
                                         <?php echo $section_1_item['title']; ?>
                                     </h3>
@@ -41,7 +41,7 @@ if (!empty($template_fields['section_1_item'])) {
                                     <i class="<?php echo $section_1_item['icon']; ?>"></i>
                                 </div>
                             </div>
-                            <div class="item_content">
+                            <div class="item_content translate-y-6">
                                 <div class="item_description">
                                     <p><span class="item_highlight">
                                             <?php echo $section_1_item['paragraph_highlight']; ?>
