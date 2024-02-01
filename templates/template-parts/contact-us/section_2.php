@@ -1,22 +1,21 @@
 <div id="section_2" class="cartas container mx-auto py-20 ">
     <div class="w-full h-full flex justify-center items-center flex-wrap">
         <?php
-        $iqty = array(1, 2, 3);
-        foreach ($iqty as $qty) { ?>
-            <div class="w-full md:w-1/3 p-4">
-                <div class="icon min-h-[40px] pb-5 flex justify-center items-center"><i
-                        class="text-secondary-500 text-8xl fa fa-credit-card" aria-hidden="true"></i></div>
-                <div class="title text-center pb-5">
-                    <h2>Emprendimiento</h2>
+        foreach ($template_fields['section_2_cards'] as $card) { ?>
+            <div class="w-full md:w-1/3 flex justify-center flex-wrap py-16 md:py-0">
+                <div class="w-full min-h-[120px] flex justify-center items-center"><i
+                        class="text-secondary-500 text-8xl <?php echo $card['card_icon'];?>" aria-hidden="true"></i></div>
+                <div class="text-center min-h-[120px] flex flex-wrap justify-center">
+                    <div class="w-full p-2 min-h-[70px] md:w-10/12"><h2 class="text-2xl"><?php echo $card['card_title'];?></h2></div>
+                    <div class="w-full min-h-[50px]"><p class="wp-2 text-dark_component-300"><?php echo $card['card_subtitle'];?></p></div>
                 </div>
-                <div class="description !text-center text-dark_component-300 w-full flex flex-wrap justify-center">
-                    <p class="p-2">Departamento de Emprendimiento</p>
-                    <a href="tel:+58412-122-312" class="p-2">Tel: 0412-435-23-42</a>
-                    <p>Correo: emprende@connosotros.com</p>
+                <div class="!text-center text-dark_component-300 w-full flex flex-wrap justify-center pt-4 pb-2">
+                    <div class="w-full"><span class="text-tertiary-500 text-xl">Llámanos</span></div>
+                    <div class="w-full pt-2"><a href="tel:<?php echo $card['card_phone'];?>">Tel: <?php echo $card['card_phone'];?></a></div>
                 </div>
+                <div class="w-full flex justify-center"><span class="text-tertiary-500 text-xl py-2">O</span></div>
                 <button
-                    class="open_modal flex w-[60%] justify-center mt-9 text-white py-[10px] bg-secondary-500 rounded-md mx-auto" data-dep="1">Obtener
-                    informacion</button>
+                    class="open_modal flex px-4 justify-center text-white py-[10px] bg-secondary-500 rounded-md" data-dep="<?php echo $card['card_id'];?>">¡Escríbenos!</button>
             </div>
         <?php } ?>
     </div>

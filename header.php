@@ -15,7 +15,7 @@
 
 <body>
 	<div id="header" class="w-full m-auto z-30">
-		<div class="container w-full nav mx-auto">
+		<div class="container w-full nav mx-auto w-full flex flex-wrap py-2 xl:py-1">
 			<div class="w-full md:w-2/12 justify-center md:justify-start logo_wrapper">
 				<a href="<?php echo home_url('/'); ?>">
 					<div class="logo"></div>

@@ -97,9 +97,9 @@
                                 <?php
                             }
                             ?>
-                            <div>
-                                <button class="cta"><a href="#">Ver más</a></button>
-                            </div>
+                        <div>
+                            <button class="cta"><a href="#">Ver más</a></button>
+                        </div>
                         </div>
                     </div>
                 </div>

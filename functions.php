@@ -89,8 +89,11 @@ function modal_response()
     if (!wp_verify_nonce($nonce, 'modalNonce')) {
         die();
     }
-    if($_POST['type'] == 1){
-        echo apply_shortcodes('[contact-form-7 id="83a515c" title="Formulario de contacto 1"]');
+    $type = $_POST['type'];
+    switch ($type) {
+        case 'finance':
+            echo apply_shortcodes('[contact-form-7 id="83a515c" title="Formulario de contacto 1"]');
+        break;
     }
     wp_die();
 }

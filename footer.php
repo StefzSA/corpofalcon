@@ -1,7 +1,7 @@
 <?php
 $page_logo = get_field('logo', 'option');
 ?>
-<div id="footer" class="bg-gradient-to-b from-white to-secondary-200 min-h-[400px] flex items-center">
+<div id="footer" class="relative z-50 bg-gradient-to-b from-white to-secondary-200 min-h-[400px] flex items-center">
 	<div class="container mx-auto">
 		<div class="w-full flex flex-wrap">
 			<div class="w-full md:w-2/4 p-3 flex">
@@ -29,7 +29,7 @@ $page_logo = get_field('logo', 'option');
 					<div class="w-full text-xl mb-4">
 						<h3>Links</h3>
 					</div>
-					<?php wp_nav_menu(array('theme_location' => 'max_mega_menu_2')); ?>
+					<?php wp_nav_menu(array('theme_location' => 'max_mega_menu_3')); ?>
 				</div>
 			</div>
 			<div class="w-full md:w-1/4 p-3">
@@ -37,7 +37,7 @@ $page_logo = get_field('logo', 'option');
 					<div class="w-full text-xl mb-4">
 						<h3>Servicios</h3>
 					</div>
-					<?php wp_nav_menu(array('theme_location' => 'max_mega_menu_3')); ?>
+					<?php wp_nav_menu(array('theme_location' => 'max_mega_menu_4')); ?>
 				</div>
 			</div>
 		</div>

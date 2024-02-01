@@ -1,6 +1,7 @@
+<style>#section_1 .section-img{ background-image: url(<?php echo $template_fields['section_1_image']; ?>); }</style>
 <div id="section_1" class="img w-full min-h-[250px] md:min-h-[330px] relative">
     <div
-        class="absolute w-full h-full bg-[rgba(0,0,0,0.7)] bg-[url('/wp-content/uploads/2024/01/medanos.jpg')] bg-cover bg-center bg-blend-color">
+        class="section-img absolute w-full h-full bg-[rgba(0,0,0,0.7)] bg-cover bg-center bg-blend-color">
     </div>
     <div class="absolute w-full h-full flex justify-center items-center flex-wrap">
         <div class="container mx-auto">
@@ -15,4 +16,6 @@
         </div>
 
     </div>
+</div>  
+
 </div>

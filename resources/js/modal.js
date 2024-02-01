@@ -8,23 +8,33 @@ function startModal() {
 }
 function openModal() {
   $(".open_modal").on("click", function () {
-    $("body").css("overflow-y", "hidden");
     let data = $(this).data("dep");
-    $.ajax({
-      type: "post",
-      url: modal_ajax.ajax_url,
-      data: {
-        action: modal_ajax.action,
-        nonce: modal_ajax.nonce,
-        type: data,
-      },
-      success: function (result) {
-        $("#modalWindow").find('#form_section').html(result);
-        $form = $('.wpcf7-form').eq(0);
-        wpcf7.init($form[0]);
-      },
-    });
+    let lastDep = $('#form_section').data('last-dep');
+    $("body").css("overflow-y", "hidden");
     $("#openModal").fadeIn();
+    if(data != lastDep ){
+      $("#modalWindow").find('#form_section').css('min-height', '550px');
+      $("#modalWindow").find('#form_section').html('<div class="loader" style="display:none;"></div>');
+      $("div.loader").show(800, function(){
+        $.ajax({
+          type: "post",
+          url: modal_ajax.ajax_url,
+          data: {
+            action: modal_ajax.action,
+            nonce: modal_ajax.nonce,
+            type: data,
+          },
+          success: function (result) {
+            $("div.loader").hide(800, function(){
+              $('#form_section').html(result);
+              $('#form_section').data('last-dep', data);
+              $form = $('.wpcf7-form').eq(0);
+              wpcf7.init($form[0]);
+            });
+          },
+        });
+      });
+    }
   });
 }
 

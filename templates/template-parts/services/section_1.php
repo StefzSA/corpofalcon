@@ -1,4 +1,4 @@
-<style>#servicios #section_1 .section-img{ background-image: url( <?php echo $template_fields['section_1_image']; ?>) }}}</style>
+<style>#servicios #section_1 .section-img{ background-image: url( <?php echo $template_fields['section_1_image']; ?>) }</style>
 <div id="section_1">
     <div class="w-full min-h-[550px] relative">
         <div
