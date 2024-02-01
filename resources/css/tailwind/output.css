@@ -1519,15 +1519,8 @@ main {
   position: relative;
   z-index: 10;
   display: flex;
-  height: var(--height-hero-mb);
   width: 100%;
   justify-content: center;
-}
-
-@media (min-width: 768px) {
-  #home #hero-section {
-    height: var(--height-hero);
-  }
 }
 
 #home #hero-section .img-bg {
