@@ -2,21 +2,21 @@
 $i = 0;
 if (!empty($template_fields['section_1_item'])) {
     echo '<style>
-    #section_1 {';
+     ';
     foreach ($template_fields['section_1_item'] as $section_1_item) {
         $i++;
-        echo ' .item_img_' . $i . ' {  background-image: url(' . $section_1_item['background_image'] . ');}'; 
+        echo ' #section_1 .item_img_' . $i . ' {  background-image: url(' . $section_1_item['background_image'] . ');}'; 
     }
-    echo '} </style>';
+    echo '</style>';
 } 
 ?>
 
 <div id="section_1">
-    <div class="section_wrap container mx-auto w-full p-4">
+    <div class="section_wrap container mx-auto w-full py-24">
         <div class="section_content flex flex-wrap">
             <?php if (!empty($template_fields['section_1_heading'])) { ?>
                 <div class="w-full">
-                    <h2 class="w-full font-bold text-3xl md:text-4xl text-secondary-500 text-center tracking-wide pb-16">
+                    <h2 class="w-full font-bold text-3xl md:text-4xl text-secondary-500 text-center tracking-wide pb-6 md:pb-16">
                         <?php echo $template_fields['section_1_heading']; ?>
                     </h2>
                     <span class="block md:hidden mt-3 text-xl text-center text-tertiary-500 my-5">¡Toca para saber

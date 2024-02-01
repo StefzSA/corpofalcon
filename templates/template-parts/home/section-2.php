@@ -1,7 +1,7 @@
 <div id="section_2">
     <div class="container mx-auto w-full py-24">
-        <div class="flex flex-wrap justify-center p-4">
-            <div class="w-full flex flex-wrap flex-col items-center pb-18">
+        <div class="flex flex-wrap justify-center">
+            <div class="w-full flex flex-wrap flex-col items-center">
                 <?php if (!empty($template_fields['section_2_heading'])) { ?>
                     <div class="w-full pb-4">
                         <h2 class="w-full font-bold text-3xl md:text-4xl text-tertiary-500 text-center tracking-wide pb-6">

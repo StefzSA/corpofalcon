@@ -9,7 +9,9 @@ All you need to change is probably here, style.css is only for WordPress to get 
 @tailwind utilities;
 
 /***************** GENERAL *****************/
-
+html{
+  scroll-behavior: smooth;
+}
 body,
 main {
   font-family: "Montreal", sans-serif;
@@ -17,10 +19,7 @@ main {
 }
 
 main {
-  margin-top: 93px;
-  @media only screen and (max-width: 480px) {
-    margin-top: 145px;
-  }
+  @apply mt-[55px] md:mt-[80px];
 }
 
 .container {
@@ -36,20 +35,13 @@ main {
   box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.2);
   top: 0;
 }
-#header .logo {
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
-  width: 100%;
+#header .logo > img {
   height: 100%;
-}
-
-#header .logo_wrapper {
-  @apply flex items-center;
+  @apply min-h-[35px] max-h-[45px];
 }
 
 #header .logo_wrapper a {
-  @apply w-[80%] h-full min-h-[85px];
+  @apply w-full h-full;
 }
 
 /***************** GENERAL *****************/
@@ -208,8 +200,12 @@ main {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 /*LOADER*/
 /*FORMS*/
@@ -219,17 +215,19 @@ main {
 .wpcf7 form {
   @apply flex flex-wrap flex-col justify-center;
 }
-.wpcf7 p {
+.wpcf7 form p:not(:last-of-type){
   @apply w-full mb-6;
 }
+
 .wpcf7 label {
   @apply w-full text-lg text-dark_component-500;
 }
 .wpcf7 input:not(.wpcf7-submit) {
   @apply transition-all max-w-full pl-6 py-3 pr-3 border-b-dark_component-500 border-solid border-b-2 text-base;
 }
+
 .wpcf7 textarea {
-  @apply transition-all  max-w-full pl-6 py-3 pr-3 w-full border-b-dark_component-500 border-solid border-b-2 max-h-48 resize-none;
+  @apply transition-all  max-w-full pl-6 py-3 pr-3 w-full border-b-dark_component-500 border-solid border-b-2 max-h-32 md:max-h-48 resize-none;
 }
 .wpcf7 .wpcf7-submit {
   @apply transition-all w-full md:w-6/12 bg-secondary-500 text-white rounded py-1 hover:bg-tertiary-500 hover:text-dark_component-500;
@@ -242,166 +240,158 @@ main {
   @apply bg-white;
   /****** VAR DEFINITION ******/
   --height-hero: 900px;
-  --height-hero-mb: 600px;
+  --height-hero-mb: 500px;
   /****** VAR DEFINITION ******/
-  .overlay.light {
-    @apply bg-gradient-to-b from-white to-secondary-200 absolute w-full;
-    height: calc(var(--height-hero) + 15%);
-    @media only screen and (max-width: 480px) {
-      height: calc(var(--height-hero-mb) + 25px);
-    }
+}
+#home .overlay.light {
+  @apply bg-gradient-to-b from-white to-secondary-200 absolute w-full h-[calc(var(--height-hero-mb)+25px)] md:h-[calc(var(--height-hero)+15%)];
+}
+#home #hero-section {
+  @apply relative flex justify-center z-10 w-full h-[var(--height-hero-mb)] md:h-[var(--height-hero)];
+}
+#home #hero-section .img-bg {
+  @apply absolute bg-no-repeat bg-cover bg-center w-[120%] h-[140%] left-0;
+}
+#home #hero-section .img-bg:before {
+  content: "";
+  @apply absolute w-full h-full opacity-[0.3] z-10;
+}
+#home #hero-section .columns {
+  @apply z-10  h-[var(--height-hero-mb)] md:h-[var(--height-hero)];
+}
+
+#home #hero-section .left {
+  @apply flex flex-wrap items-center;
+}
+
+#home #hero-section .left .title {
+  animation: FadeInDown 2s ease-in-out;
+  @apply px-4 md:px-0 text-center md:text-left text-3xl md:text-8xl font-bold text-tertiary-500 leading-none;
+}
+
+#home #hero-section .description {
+  animation: FadeInLeft 2s ease-in-out forwards 1.5s;
+  @apply px-4 opacity-0 text-xl md:text-2xl md:px-0 text-center md:text-left text-dark_component-500 w-full md:w-10/12;
+}
+
+#home #hero-section .description{
+  @apply py-5;
+}
+
+#home #hero-section .section_transition {
+  @apply z-10 relative w-full;
+}
+#home #section_1 {
+  @apply relative w-full flex min-h-[500px];
+}
+#home #section_1 .section_wrap {
+  @apply mt-8 mb-24 z-10 flex;
+}
+#home #section_1 .section_content {
+  @apply flex flex-wrap items-center justify-evenly w-full;
+}
+#home #section_1 .item_wrap > *:first-child {
+  @apply absolute bg-center bg-no-repeat bg-cover overflow-hidden;
+  height: calc(100% - 4px);
+  width: calc(100% - 4px);
+}
+#home #section_1 .item_wrap {
+  @apply flex items-center justify-center mb-8 overflow-hidden relative transition-all duration-300 ease-in-out px-1 py-1;
+}
+#home #section_1 .item_icon {
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+  @apply justify-center hidden md:flex items-center text-8xl text-tertiary-500 absolute w-full h-full transition-all duration-300 ease-in-out;
+}
+
+#home #section_1 .overlay {
+  @apply z-0 absolute w-full h-full opacity-100 backdrop-blur-[2px] transition-all duration-500 ease-in-out;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#home #section_1 .item_title {
+  padding: 2rem 1.2rem !important;
+  text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+  @apply z-10 absolute w-full h-full bottom-0 transition-all duration-500 ease-in-out min-h-[100px] text-center text-2xl md:text-3xl text-tertiary-500;
+}
+#home #section_1 .item_title > h3 {
+  @apply w-full min-h-[100px];
+}
+#home #section_1 .item_content {
+  @apply z-[99] min-h-[450px] text-dark_component-500 bg-transparent flex justify-center flex-col;
+}
+#home #section_1 .item_content > * {
+  @apply w-full;
+}
+
+#home #section_1 .item_content > .item_description {
+  padding: 1rem 1.2rem;
+  @apply font-medium w-full min-h-[200px] text-justify text-white pt-0;
+}
+
+#home #section_1 .item_content > .item_description.item_highlight {
+  @apply text-tertiary-500 font-bold text-lg;
+}
+/*Devices with hover*/
+@media (hover: hover) {
+  #home #section_1 .item_title > h3 {
+    @apply transition-all duration-500 ease-in-out translate-y-[300%];
   }
-  #hero-section {
-    @apply relative overflow-hidden flex justify-center z-10 w-full;
-    height: var(--height-hero);
-    @media only screen and (max-width: 480px) {
-      height: var(--height-hero-mb);
-    }
-    > .img-bg {
-      @apply absolute bg-no-repeat bg-cover bg-center w-[120%] h-[140%] left-0;
-      &:before {
-        content: "";
-        @apply absolute w-full h-full opacity-[0.3] z-10;
-      }
-    }
-    .columns {
-      @apply z-10;
-      height: var(--height-hero);
-
-      @media only screen and (max-width: 480px) {
-        height: var(--height-hero-mb);
-      }
-    }
-
-    .left {
-      @apply flex flex-wrap items-center;
-      .title {
-        animation: FadeInDown 2s ease-in-out;
-        @apply px-4 md:px-0 text-center md:text-left text-2xl md:text-8xl font-bold text-tertiary-500 leading-none;
-      }
-
-      .description {
-        animation: FadeInLeft 2s ease-in-out forwards 1.5s;
-        @apply px-4 opacity-0 text-2xl md:px-0 text-center md:text-left text-dark_component-500 w-full md:w-10/12;
-      }
-
-      > div {
-        @apply py-5;
-      }
-    }
-  }
-  .section_transition {
-    @apply z-10 relative w-full min-h-[300px];
-    min-height: 300px;
-    @media only screen and (max-width: 480px) {
-      min-height: 100px;
-    }
+  #home #section_1 .item_content {
+    @apply transition-all duration-500 ease-in-out translate-y-[150%];
   }
 
-  #section_1 {
-    @apply relative w-full flex min-h-[500px];
-    .section_wrap {
-      @apply mt-8 mb-24 z-10 flex;
-      .section_content {
-        @apply flex flex-wrap items-center justify-evenly w-full;
-        .item_wrap > *:first-child {
-          @apply absolute bg-center bg-no-repeat bg-cover overflow-hidden;
-          height: calc(100% - 4px);
-          width: calc(100% - 4px);
-        }
-        .item_wrap {
-          @apply flex items-center justify-center mb-8 overflow-hidden relative transition-all duration-300 ease-in-out px-1 py-1;
-          .item_icon {
-            text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
-            @apply justify-center hidden md:flex items-center text-8xl text-tertiary-500 absolute w-full h-full transition-all duration-300 ease-in-out;
-          }
-
-          .overlay {
-            @apply z-0 absolute w-full h-full opacity-100 backdrop-blur-[2px] transition-all duration-500 ease-in-out;
-            background-color: rgba(0, 0, 0, 0.6);
-          }
-          .item_title {
-            padding: 2rem 1.2rem !important;
-            text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
-            @apply z-10 absolute w-full h-full bottom-0 transition-all duration-500 ease-in-out min-h-[100px] text-center text-3xl font-bold text-tertiary-500;
-            > h3 {
-              @apply w-full min-h-[100px];
-            }
-          }
-          .item_content {
-            @apply z-[99] min-h-[450px] text-dark_component-500 bg-transparent flex justify-center flex-col;
-
-            > * {
-              @apply w-full;
-            }
-
-            > .item_description {
-              padding: 1rem 1.2rem;
-              @apply font-medium w-full min-h-[200px] text-justify text-white pt-0;
-
-              .item_highlight {
-                @apply text-tertiary-500 font-bold text-lg;
-              }
-            }
-          }
-        }
-
-        /*Devices with hover*/
-        @media (hover: hover) {
-          .item_title {
-            > h3 {
-              @apply transition-all duration-500 ease-in-out translate-y-[300%];
-            }
-          }
-          .item_content {
-            @apply transition-all duration-500 ease-in-out translate-y-[150%];
-          }
-
-          .item_wrap:hover .item_icon {
-            @apply opacity-0;
-          }
-          .item_wrap:hover .item_title {
-            @apply text-secondary-500 transition-all duration-500 ease-in-out;
-            > h3 {
-              @apply transition-all duration-500 ease-in-out w-full translate-y-0;
-            }
-          }
-          .item_wrap:hover .overlay {
-            @apply z-0 absolute w-full h-full opacity-100 backdrop-blur-[6px] transition-all duration-500 ease-in-out;
-            background-color: rgba(0, 0, 0, 0.7);
-          }
-          .item_wrap:hover .item_content {
-            @apply text-dark_component-500 transition-all duration-500 ease-in-out translate-y-0 z-[99];
-          }
-          .item_wrap:hover {
-            @apply translate-y-[-3%] transition-all duration-300 ease-in-out;
-          }
-          .item_wrap::before {
-            content: "";
-            animation: border_contract 1s reverse ease-in-out;
-          }
-          .item_wrap:hover::before {
-            animation: border_expand 0.4s forwards ease-in-out normal;
-          }
-        }
-        @media (hover: none) {
-          .item_wrap::before {
-            content: "";
-            animation: border_contract 1s reverse ease-in-out;
-          }
-          .item_wrap::before {
-            animation: border_expand 0.4s forwards ease-in-out normal;
-          }
-        }
-      }
-    }
+  #home #section_1 .item_wrap:hover .item_icon {
+    @apply opacity-0;
+  }
+  #home #section_1 .item_wrap:hover .item_title {
+    @apply text-secondary-500 transition-all duration-500 ease-in-out;
+  }
+  #home #section_1 .item_wrap:hover .item_title > h3 {
+    @apply transition-all duration-500 ease-in-out w-full translate-y-0;
+  }
+  #home #section_1 .item_wrap:hover .overlay {
+    @apply z-0 absolute w-full h-full opacity-100 backdrop-blur-[6px] transition-all duration-500 ease-in-out;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  #home #section_1 .item_wrap:hover .item_content {
+    @apply text-dark_component-500 transition-all duration-500 ease-in-out translate-y-0 z-[99];
+  }
+  #home #section_1 .item_wrap:hover {
+    @apply translate-y-[-3%] transition-all duration-300 ease-in-out;
+  }
+  #home #section_1 .item_wrap::before {
+    content: "";
+    animation: border_contract 1s reverse ease-in-out;
+  }
+  #home #section_1 .item_wrap:hover::before {
+    animation: border_expand 0.4s forwards ease-in-out normal;
   }
 }
-#section_3 square {
+@media (hover: none) {
+  #home #section_1 .item_wrap::before {
+    content: "";
+    animation: border_contract 1s reverse ease-in-out;
+  }
+  #home #section_1 .item_wrap::before {
+    animation: border_expand 0.4s forwards ease-in-out normal;
+  }
+}
+#section_3 .square {
   @apply w-full h-full bg-tertiary-400 rounded-xl absolute z-0 translate-x-8 translate-y-8;
 }
 
 /***************** ANIMATIONS *****************/
+.FadeInUp{
+  animation: .5s FadeInUp ease-in-out forwards;
+}
+.FadeInDown{
+  animation: .5s FadeInDown ease-in-out forwards;
+}
+.FadeInLeft{
+  animation: .5s FadeInLeft ease-in-out forwards;
+}
+.FadeInRight{
+  animation: .5s FadeInRight ease-in-out forwards;
+}
 
 /******** PROPERTIES ********/
 .anim_delay-250ms {
@@ -425,7 +415,7 @@ main {
 /******** BASIC ********/
 @keyframes FadeInLeft {
   from {
-    transform: translateX(-150%);
+    transform: translateX(-120%);
     opacity: 0;
   }
 
@@ -437,7 +427,7 @@ main {
 
 @keyframes FadeInRight {
   from {
-    transform: translateX(150%);
+    transform: translateX(120%);
     opacity: 0;
   }
 
@@ -449,7 +439,7 @@ main {
 
 @keyframes FadeInDown {
   from {
-    transform: translateY(-150%);
+    transform: translateY(-120%);
     opacity: 0;
   }
 
@@ -461,7 +451,7 @@ main {
 
 @keyframes FadeInUp {
   from {
-    transform: translateY(200%);
+    transform: translateY(120%);
     opacity: 0;
   }
 
