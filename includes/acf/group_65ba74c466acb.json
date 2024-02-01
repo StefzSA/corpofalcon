@@ -192,7 +192,7 @@
                             "name": "item_icon",
                             "aria-label": "",
                             "type": "font-awesome",
-                            "instructions": "",
+                            "instructions": "Search the icons you want in place here:\r\nhttps:\/\/fontawesome.com\/search?o=r&m=free",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -208,7 +208,7 @@
                             "custom_icon_set": "",
                             "default_label": "",
                             "default_value": "",
-                            "save_format": "element",
+                            "save_format": "class",
                             "allow_null": 0,
                             "show_preview": 1,
                             "enqueue_fa": 0,
@@ -299,5 +299,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1706755993
+    "modified": 1706759347
 }

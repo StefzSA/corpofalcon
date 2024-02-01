@@ -702,6 +702,10 @@ video {
   min-height: 250px;
 }
 
+.min-h-\[30px\] {
+  min-height: 30px;
+}
+
 .min-h-\[400px\] {
   min-height: 400px;
 }
@@ -718,8 +722,16 @@ video {
   min-height: 700px;
 }
 
+.min-h-\[70px\] {
+  min-height: 70px;
+}
+
 .min-h-\[70vh\] {
   min-height: 70vh;
+}
+
+.min-h-\[90px\] {
+  min-height: 90px;
 }
 
 .w-10\/12 {
@@ -770,6 +782,10 @@ video {
 
 .justify-center {
   justify-content: center;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .rounded {
@@ -845,6 +861,10 @@ video {
   padding: 1rem;
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
 .p-8 {
   padding: 2rem;
 }
@@ -892,6 +912,10 @@ video {
   padding-bottom: 4rem;
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -908,12 +932,12 @@ video {
   padding-top: 2.5rem;
 }
 
-.pt-24 {
-  padding-top: 6rem;
+.pt-2 {
+  padding-top: 0.5rem;
 }
 
-.text-left {
-  text-align: left;
+.pt-24 {
+  padding-top: 6rem;
 }
 
 .\!text-center {
@@ -922,10 +946,6 @@ video {
 
 .text-center {
   text-align: center;
-}
-
-.text-right {
-  text-align: right;
 }
 
 .text-2xl {
@@ -956,6 +976,11 @@ video {
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-sm {
@@ -1081,7 +1106,7 @@ main {
     }
   }
   .logo {
-    background-image: url( /wp-content/uploads/2024/01/logo_header.png);
+    background-image: url(/wp-content/uploads/2024/01/logo_header.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -1275,58 +1300,49 @@ main {
   }
 }
 
-.cta {
-  > a {
-    border-radius: 50px;
-    position: relative;
-    padding: 12px 24px;
-    min-height: 50px;
-    min-width: 100px;
-    transition: 0.4s all ease-in-out;
-    font-weight: 600;
-  }
-  > a {
-    --tw-border-opacity: 1;
-    border-color: rgb(69 136 246 / var(--tw-border-opacity));
-  }
-  > a {
-    --tw-bg-opacity: 1;
-    background-color: rgb(69 136 246 / var(--tw-bg-opacity));
-  }
-  > a:hover {
-    transform: translateY(-5px);
-  }
-  > a:hover {
-    --tw-bg-opacity: 1;
-    background-color: rgb(69 136 246 / var(--tw-bg-opacity));
-  }
-  > a::after {
-    position: absolute;
-    content: "";
-    width: 0%;
-    height: 3px;
-    left: 50%;
-    bottom: -1px;
-    z-index: 99;
-    bottom: 0;
-    transition: 0.5s all ease-in-out;
-  }
-  > a::after {
-    --tw-bg-opacity: 1;
-    background-color: rgb(115 200 36 / var(--tw-bg-opacity));
-  }
-  > a:hover::after {
-    border-radius: 0px 0px 10px 10px;
-    bottom: 0px;
-    width: 84%;
-    left: 7.6%;
-    z-index: 99;
-    transition: 0.5s all ease-in-out;
-  }
-  > a:hover::after {
-    --tw-bg-opacity: 1;
-    background-color: rgb(115 200 36 / var(--tw-bg-opacity));
-  }
+.cta > a {
+  border-radius: 50px;
+  position: relative;
+  padding: 12px 24px;
+  min-height: 50px;
+  min-width: 100px;
+  transition: 0.4s all ease-in-out;
+  font-weight: 600;
+  --tw-border-opacity: 1;
+  border-color: rgb(69 136 246 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(69 136 246 / var(--tw-bg-opacity));
+}
+
+.cta > a:hover {
+  transform: translateY(-5px);
+  --tw-bg-opacity: 1;
+  background-color: rgb(69 136 246 / var(--tw-bg-opacity));
+}
+
+.cta > a::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 3px;
+  left: 50%;
+  bottom: -1px;
+  z-index: 99;
+  bottom: 0;
+  transition: 0.5s all ease-in-out;
+  --tw-bg-opacity: 1;
+  background-color: rgb(115 200 36 / var(--tw-bg-opacity));
+}
+
+.cta > a:hover::after {
+  border-radius: 0px 0px 10px 10px;
+  bottom: 0px;
+  width: 84%;
+  left: 7.6%;
+  z-index: 99;
+  transition: 0.5s all ease-in-out;
+  --tw-bg-opacity: 1;
+  background-color: rgb(115 200 36 / var(--tw-bg-opacity));
 }
 
 /*FORMS*/
@@ -2093,6 +2109,10 @@ main {
     max-height: 128px;
   }
 
+  .md\:min-h-\[150px\] {
+    min-height: 150px;
+  }
+
   .md\:min-h-\[330px\] {
     min-height: 330px;
   }
@@ -2175,6 +2195,10 @@ main {
     text-align: left;
   }
 
+  .md\:text-right {
+    text-align: right;
+  }
+
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -2192,6 +2216,11 @@ main {
 
   .md\:text-6xl {
     font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .md\:text-7xl {
+    font-size: 4.5rem;
     line-height: 1;
   }
 }

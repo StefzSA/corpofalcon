@@ -10,7 +10,7 @@
 	wp_head(); 
 	$page_logo = get_field('logo', 'option');
 	?>
-	<style> #header{ .logo { background-image: url('<?php echo $page_logo; ?>'); } }</style>
+	<style> #header .logo{ background-image: url('<?php echo $page_logo; ?>'); }</style>
 </head>
 
 <body>

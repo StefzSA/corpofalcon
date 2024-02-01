@@ -1,5 +1,5 @@
 <?php
-echo '<style>#home{#section_4{.banner{ background-image: url('.$template_fields['section_4_image'].'); }}}</style>';
+echo '<style>#home #section_4 .banner{ background-image: url('.$template_fields['section_4_image'].'); }}}</style>';
 ?>
 <div id="section_4" class="relative z-50 md:static py-8 md:py-24">
     <div class="w-full min-h-[700px] md:min-h-[550px] relative">

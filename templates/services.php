@@ -12,9 +12,6 @@ $template_fields = get_fields();
     <?php 
     include_once(PARTS_DIR .'/services/section_1.php');
     include_once(PARTS_DIR .'/services/section_2.php');
-    // include_once(PARTS_DIR .'/services/section_3.php');
-    // include_once(PARTS_DIR .'/services/section_4.php');
-    // include_once(PARTS_DIR .'/services/section_5.php');
     ?>
 </main>
 

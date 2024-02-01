@@ -41,7 +41,7 @@ main {
   }
 
   .logo {
-    background-image: url( /wp-content/uploads/2024/01/logo_header.png);
+    background-image: url(/wp-content/uploads/2024/01/logo_header.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -168,63 +168,64 @@ main {
 }
 /******** CAROUSEL ********/
 .cta {
-  @apply flex justify-center md:justify-start text-white;
-  > a {
-    border-radius: 50px;
-    position: relative;
-    padding: 12px 24px;
-    min-height: 50px;
-    min-width: 100px;
-    transition: 0.4s all ease-in-out;
-    font-weight: 600;
-    @apply border-secondary-500 bg-secondary-500;
-  }
-  > a:hover {
-    transform: translateY(-5px);
-    @apply bg-secondary-500;
-  }
+  @apply flex justify-center md:justify-start text-white; 
+}
 
-  > a::after {
-    position: absolute;
-    content: "";
-    width: 0%;
-    height: 3px;
-    left: 50%;
-    bottom: -1px;
-    z-index: 99;
-    bottom: 0;
-    transition: 0.5s all ease-in-out;
-    @apply bg-tertiary-500;
-  }
-  > a:hover::after {
-    border-radius: 0px 0px 10px 10px;
-    bottom: 0px;
-    width: 84%;
-    left: 7.6%;
-    z-index: 99;
-    transition: 0.5s all ease-in-out;
-    @apply bg-tertiary-500;
-  }
+.cta > a {
+  border-radius: 50px;
+  position: relative;
+  padding: 12px 24px;
+  min-height: 50px;
+  min-width: 100px;
+  transition: 0.4s all ease-in-out;
+  font-weight: 600;
+  @apply border-secondary-500 bg-secondary-500;
+}
+.cta > a:hover {
+  transform: translateY(-5px);
+  @apply bg-secondary-500;
+}
+
+.cta > a::after {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 3px;
+  left: 50%;
+  bottom: -1px;
+  z-index: 99;
+  bottom: 0;
+  transition: 0.5s all ease-in-out;
+  @apply bg-tertiary-500;
+}
+.cta > a:hover::after {
+  border-radius: 0px 0px 10px 10px;
+  bottom: 0px;
+  width: 84%;
+  left: 7.6%;
+  z-index: 99;
+  transition: 0.5s all ease-in-out;
+  @apply bg-tertiary-500;
 }
 /*FORMS*/
 .wpcf7 {
   @apply w-full;
-  form{
+  form {
     @apply flex flex-wrap flex-col justify-center;
   }
-  p{
+  p {
     @apply w-full mb-6;
   }
-  label{
+  label {
     @apply w-full text-lg text-dark_component-500;
   }
-  input:not(.wpcf7-submit){
+  input:not(.wpcf7-submit) {
     @apply transition-all max-w-full pl-6 py-3 pr-3 border-b-dark_component-500 border-solid border-b-2 text-base;
   }
-  textarea{
+  textarea {
     @apply transition-all  max-w-full pl-6 py-3 pr-3 w-full border-b-dark_component-500 border-solid border-b-2 max-h-48 resize-none;
   }
-  .wpcf7-submit{
+  .wpcf7-submit {
     @apply transition-all w-full md:w-6/12 bg-secondary-500 text-white rounded py-1 hover:bg-tertiary-500 hover:text-dark_component-500;
   }
 }
@@ -481,7 +482,6 @@ main {
     }
   }
 }
-
 
 /***************** ANIMATIONS *****************/
 
