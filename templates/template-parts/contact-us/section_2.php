@@ -3,8 +3,8 @@
         <?php
         $iqty = array(1, 2, 3);
         foreach ($iqty as $qty) { ?>
-            <div class="w-full md:w-1/3 p-4">
-                <div class="icon min-h-[40px] pb-5 flex justify-center items-center"><i
+            <div class="w-full md:w-1/3 p-4 flex justify-center flex-wrap">
+                <div class="w-full icon min-h-[40px] pb-5 flex justify-center items-center"><i
                         class="text-secondary-500 text-8xl fa fa-credit-card" aria-hidden="true"></i></div>
                 <div class="title text-center pb-5">
                     <h2>Emprendimiento</h2>
@@ -15,7 +15,7 @@
                     <p>Correo: emprende@connosotros.com</p>
                 </div>
                 <button
-                    class="open_modal flex w-[60%] justify-center mt-9 text-white py-[10px] bg-secondary-500 rounded-md mx-auto" data-dep="1">Obtener
+                    class="open_modal flex px-4 justify-center mt-9 text-white py-[10px] bg-secondary-500 rounded-md" data-dep="1">Obtener
                     informacion</button>
             </div>
         <?php } ?>

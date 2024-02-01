@@ -20,20 +20,28 @@ if ($debug == 1) {
 }
 
 // frontend script & style
-function assets_load_header_top()
+function assets_load()
 {
     wp_enqueue_style('tailwind-css', get_template_directory_uri() . '/resources/css/tailwind/output.css');
     wp_enqueue_style('fontawesome6', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
     wp_enqueue_style('Font Include', get_template_directory_uri() . '/resources/css/font-include.css');
+
+    wp_deregister_script('jquery');
+    wp_enqueue_script('jQuery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js');
+
+    wp_enqueue_script('modaljs', get_template_directory_uri() . '/resources/js/modal.js');
+    wp_localize_script('modaljs', 'modal_ajax', array(
+        'ajax_url' => admin_url('admin-ajax.php'),
+        'nonce' => wp_create_nonce('modalNonce'),
+        'action' => 'modalAction'
+    ));
 }
 
 function assets_load_footer()
 {
-    wp_enqueue_script('jQuery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js');
     if (is_page_template('templates/home.php')) {
         wp_enqueue_script('Carousel', get_template_directory_uri() . '/resources/js/carousel.js');
     }
-    modalAJax();
 }
 
 function plugin_activation($plugin)
@@ -69,34 +77,25 @@ function save_theme_acfs( $path ) {
 add_action('after_setup_theme', 'plugins_setup');
 add_filter('acf/settings/save_json', 'save_theme_acfs' );
 add_filter('acf/settings/load_json', 'load_theme_acfs' );
-add_action('wp_enqueue_scripts', 'assets_load_header_top');
+add_action('wp_enqueue_scripts', 'assets_load');
 add_action('wp_footer', 'assets_load_footer');
 
 
 /************** AJAX FUNCTIONS **************/
-function modalAjax()
-{
-    wp_enqueue_script('modal', get_template_directory_uri() . '/resources/js/modal.js');
-    wp_localize_script('modal', 'modal_ajax', array(
-        'url' => admin_url('admin_ajax.php'),
-        'nonce' => wp_create_nonce('modal_nonce'),
-        'action' => 'modal_controller'
-    ));
-}
-function contact_form()
+
+function modal_response()
 {
     $nonce = sanitize_text_field($_POST['nonce']);
-    if (!wp_verify_nonce($nonce, 'modal_nonce')) {
+    if (!wp_verify_nonce($nonce, 'modalNonce')) {
         die();
     }
     if($_POST['type'] == 1){
-        header("Content-Type: text/html");
         echo apply_shortcodes('[contact-form-7 id="83a515c" title="Formulario de contacto 1"]');
     }
     wp_die();
 }
 
-add_action('wp_ajax_nopriv_modal_controller', 'contact_form');
-add_action('wp_ajax_modal_controller', 'contact_form');
+add_action('wp_ajax_nopriv_modalAction', 'modal_response');
+add_action('wp_ajax_modalAction', 'modal_response');
 
 /************** AJAX FUNCTIONS **************/

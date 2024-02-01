@@ -4,9 +4,13 @@ module.exports = {
     "./*.{php,html,js}",
     "templates/*.{php,html,js}",
     "templates/template-parts/*/*.{php,html,js}",
+    "includes/*.{php,html,js}",
   ],
   theme: {
     extend: {},
+    container: {
+      center: true,
+    },
     colors: {
       primary: {
         100: "#dddddd",

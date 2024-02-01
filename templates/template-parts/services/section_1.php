@@ -1,10 +1,8 @@
-<?php
-echo '<style>#services{#section_1{.banner{ background-image: url('.$template_fields['section_4_image'].'); }}}</style>';
-?>
+<style>#servicios { #section_1 { .section-img{ background-image: url( <?php echo $template_fields['section_1_image']; ?>) }}}</style>
 <div id="section_1">
     <div class="w-full min-h-[550px] relative">
         <div
-            class="banner absolute w-full h-full bg-[rgba(0,0,0,0.7)] bg-cover bg-center bg-blend-color">
+            class="section-img absolute w-full h-full bg-[rgba(0,0,0,0.7)] bg-cover bg-center bg-blend-color">
         </div>
         <div class="absolute w-full h-full flex flex-wrap justify-center items-center">
             <div class="container mx-auto w-full">

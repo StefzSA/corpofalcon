@@ -37,12 +37,8 @@ main {
   box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.2);
   top: 0;
 
-  .nav {
-    @apply w-full flex flex-wrap py-2 xl:py-1;
-  }
-
   .logo {
-    background-image: url(http://localhost/corpofalcon/wp-content/uploads/2024/01/logo_header.png);
+    background-image: url( /wp-content/uploads/2024/01/logo_header.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -51,14 +47,11 @@ main {
   }
 
   .logo_wrapper {
-    display: flex;
-    align-items: center;
+    @apply flex items-center;
   }
 
   .logo_wrapper a {
-    width: 80%;
-    height: 100%;
-    min-height: 85px;
+    @apply w-[80%] h-full min-h-[85px];
   }
 }
 
@@ -220,45 +213,27 @@ main {
   --height-hero-mb: 600px;
   /****** VAR DEFINITION ******/
   .overlay.light {
-    position: absolute;
-    width: 100%;
-    @apply bg-gradient-to-b from-white to-secondary-200;
+    @apply bg-gradient-to-b from-white to-secondary-200 absolute w-full;
     height: calc(var(--height-hero) + 15%);
     @media only screen and (max-width: 480px) {
       height: calc(var(--height-hero-mb) + 25px);
     }
   }
   #hero-section {
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    z-index: 1;
-    width: 100%;
+    @apply relative overflow-hidden flex justify-center z-10 w-full;
     height: var(--height-hero);
-
     @media only screen and (max-width: 480px) {
       height: var(--height-hero-mb);
     }
     > .img-bg {
-      position: absolute;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-      width: 120%;
-      height: 140%;
-      left: 0%;
+      @apply absolute bg-no-repeat bg-cover bg-center w-[120%] h-[140%] left-0;
       &:before {
         content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        opacity: 0.3;
-        z-index: 1;
+        @apply absolute w-full h-full opacity-[0.3] z-10;
       }
     }
     .columns {
-      z-index: 1;
+      @apply z-10;
       height: var(--height-hero);
 
       @media only screen and (max-width: 480px) {
@@ -267,20 +242,15 @@ main {
     }
 
     .left {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-
+      @apply flex flex-wrap items-center;
       .title {
         animation: FadeInDown 2s ease-in-out;
         @apply px-4 md:px-0 text-center md:text-left text-2xl md:text-8xl font-bold text-tertiary-500 leading-none;
       }
 
       .description {
-        opacity: 0;
         animation: FadeInLeft 2s ease-in-out forwards 1.5s;
-        font-size: 1.5rem;
-        @apply px-4 md:px-0 text-center md:text-left text-dark_component-500 w-full md:w-10/12;
+        @apply px-4 opacity-0 text-2xl md:px-0 text-center md:text-left text-dark_component-500 w-full md:w-10/12;
       }
 
       > div {
@@ -289,9 +259,7 @@ main {
     }
   }
   .section_transition {
-    z-index: 1;
-    position: relative;
-    width: 100%;
+    @apply z-10 relative w-full min-h-[300px];
     min-height: 300px;
     @media only screen and (max-width: 480px) {
       min-height: 100px;
@@ -299,90 +267,45 @@ main {
   }
 
   #section_1 {
-    position: relative;
-    width: 100%;
-    display: flex;
-    min-height: 500px;
+    @apply relative w-full flex min-h-[500px];
     .section_wrap {
-      margin-top: 32px;
-      margin-bottom: 96px;
-      z-index: 1;
-      display: flex;
-
+      @apply mt-8 mb-24 z-10 flex;
       .section_content {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-evenly;
-        width: 100%;
-
+        @apply flex flex-wrap items-center justify-evenly w-full;
         .item_wrap > *:first-child {
-          position: absolute;
-          background-position: center center;
-          background-repeat: no-repeat;
-          background-size: cover;
+          @apply absolute bg-center bg-no-repeat bg-cover overflow-hidden;
           height: calc(100% - 4px);
           width: calc(100% - 4px);
-          overflow: hidden;
         }
         .item_wrap {
-          overflow: hidden;
-          padding: 3px 3px;
-          @apply flex items-center justify-center mb-8;
-          position: relative;
-          transition: all 0.3s ease-in-out;
-
+          @apply flex items-center justify-center mb-8 overflow-hidden relative transition-all duration-300 ease-in-out px-1 py-1;
           .item_icon {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            transition: all 0.3s ease-in-out;
             text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
-            @apply justify-center hidden md:flex items-center text-8xl text-tertiary-500;
+            @apply justify-center hidden md:flex items-center text-8xl text-tertiary-500 absolute w-full h-full transition-all duration-300 ease-in-out;
           }
 
           .overlay {
-            z-index: 0;
-            position: absolute;
-            width: 100%;
-            height: 100%;
+            @apply z-0 absolute w-full h-full opacity-100 backdrop-blur-[2px] transition-all duration-500 ease-in-out;
             background-color: rgba(0, 0, 0, 0.6);
-            opacity: 1;
-            backdrop-filter: blur(2px);
-            transition: all 0.5s ease-in-out;
           }
           .item_title {
-            z-index: 1;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            bottom: 0;
-            transition: all 0.5s ease-in-out;
-            min-height: 100px;
-            width: 100%;
             padding: 2rem 1.2rem !important;
             text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
-            @apply text-center text-3xl font-bold text-tertiary-500;
+            @apply z-10 absolute w-full h-full bottom-0 transition-all duration-500 ease-in-out min-h-[100px] text-center text-3xl font-bold text-tertiary-500;
             > h3 {
-              width: 100%;
-              min-height: 100px;
+              @apply w-full min-h-[100px];
             }
           }
           .item_content {
-            z-index: 99;
-            min-height: 450px;
-            @apply text-dark_component-500 bg-transparent flex justify-center flex-col;
+            @apply z-[99] min-h-[450px] text-dark_component-500 bg-transparent flex justify-center flex-col;
 
             > * {
-              width: 100%;
+              @apply w-full;
             }
 
             > .item_description {
               padding: 1rem 1.2rem;
-              font-weight: 500;
-              width: 100%;
-              min-height: 200px;
-              @apply text-justify text-white pt-0;
+              @apply font-medium w-full min-h-[200px] text-justify text-white pt-0;
 
               .item_highlight {
                 @apply text-tertiary-500 font-bold text-lg;
@@ -395,46 +318,31 @@ main {
         @media (hover: hover) {
           .item_title {
             > h3 {
-              transition: all 0.5s ease-in-out;
-              transform: translateY(300%);
+              @apply transition-all duration-500 ease-in-out translate-y-[300%];
             }
           }
           .item_content {
-            transition: all 0.5s ease-in-out;
-            transform: translateY(150%);
+            @apply transition-all duration-500 ease-in-out translate-y-[150%];
           }
 
           .item_wrap:hover .item_icon {
-            opacity: 0;
+            @apply opacity-0;
           }
           .item_wrap:hover .item_title {
-            transition: all 0.5s ease-in-out;
-            @apply text-secondary-500;
+            @apply text-secondary-500 transition-all duration-500 ease-in-out;
             > h3 {
-              transition: all 0.5s ease-in-out;
-              width: 100%;
-              transform: translateY(0%);
+              @apply transition-all duration-500 ease-in-out w-full translate-y-0;
             }
           }
           .item_wrap:hover .overlay {
-            z-index: 0;
-            position: absolute;
-            width: 100%;
-            height: 100%;
+            @apply z-0 absolute w-full h-full opacity-100 backdrop-blur-[6px] transition-all duration-500 ease-in-out;
             background-color: rgba(0, 0, 0, 0.7);
-            opacity: 1;
-            backdrop-filter: blur(6px);
-            transition: all 0.5s ease-in-out;
           }
           .item_wrap:hover .item_content {
-            transition: all 0.5s ease-in-out;
-            transform: translateY(0%);
-            z-index: 99;
-            @apply text-dark_component-500;
+            @apply text-dark_component-500 transition-all duration-500 ease-in-out translate-y-0 z-[99];
           }
           .item_wrap:hover {
-            transform: translateY(-3%);
-            transition: all 0.3s ease-in-out;
+            @apply translate-y-[-3%] transition-all duration-300 ease-in-out;
           }
           .item_wrap::before {
             content: "";
