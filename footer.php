@@ -7,9 +7,9 @@ $page_logo = get_field('logo', 'option');
 			<div class="w-full md:w-2/4 p-3 flex">
 				<div class="w-full flex flex-col flex-wrap text-base px-3 py-4">
 					<div class="mb-8 md:mb-4">
-						<img class="mx-auto md:mx-0 md:max-h-[128px] md:max-w-[128px]"
-							src="<?php echo $page_logo; ?>"
-							alt="Logotipo de la compañía">
+						<a href="<?php echo home_url('/')?>">
+							<img class="mx-auto md:mx-0 md:max-h-[128px] md:max-w-[128px]" src="<?php echo $page_logo; ?>" alt="Logotipo de la compañía">
+						</a>
 					</div>
 					<div class="text-xl mb-4">
 						<h3>Contáctanos</h3>
@@ -18,10 +18,8 @@ $page_logo = get_field('logo', 'option');
 					<div class="w-8/12 text-secondary-500 mb-2">
 						<p>Impulsando el desarrollo de Falcon</p>
 					</div>
-					<div class="text-dark_component-500 mb-6"><a
-							href="mailto:corpofalcon.informatica@gmail.com">corpofalcon.informatica@gmail.com</a></div>
-					<div class="text-secondary-500 text-2xl"><a href="https://instagram.com/corpofalcon"><i
-								class="fa-brands fa-instagram"></i></a></div>
+					<div class="text-dark_component-500 mb-6"><a href="mailto:corpofalcon.informatica@gmail.com">corpofalcon.informatica@gmail.com</a></div>
+					<div class="text-secondary-500 text-2xl"><a href="https://instagram.com/corpofalcon"><i class="fa-brands fa-instagram"></i></a></div>
 				</div>
 			</div>
 			<div class="w-full md:w-1/4 p-3">

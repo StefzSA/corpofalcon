@@ -26,6 +26,15 @@ main {
   max-width: 1140px;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 /***************** GENERAL *****************/
 
 /***************** HEADER *****************/
@@ -271,7 +280,7 @@ main {
 
 #home #hero-section .description {
   animation: FadeInLeft 2s ease-in-out forwards 1.5s;
-  @apply px-4 opacity-0 text-xl md:text-2xl md:px-0 text-center md:text-left text-dark_component-500 w-full md:w-10/12;
+  @apply px-4 opacity-0 text-xl md:px-0 text-center md:text-left text-dark_component-500 w-full md:w-10/12;
 }
 
 #home #hero-section .description{

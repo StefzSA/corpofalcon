@@ -10,7 +10,7 @@
                 <?php } ?>
                 <?php if (!empty($template_fields['section_2_paragraph'])) { ?>
                     <div class="w-full md:w-8/12">
-                        <p class="w-full text-center text-xl md:text-2xl tracking-wide pb-6"><?php echo $template_fields['section_2_paragraph']; ?></p>
+                        <p class="w-full text-center text-xl tracking-wide pb-6"><?php echo $template_fields['section_2_paragraph']; ?></p>
                     </div>
                 <?php } ?>
             </div>
@@ -34,7 +34,7 @@
                 ?>
                 <?php if (!empty($template_fields['section_2_button_text'])) { ?>
                     <div class="w-full flex justify-center mt-8">
-                        <div class="cta"><a href="<?php echo $template_fields['section_2_button_link']; ?>"><?php echo $template_fields['section_2_button_text']; ?></a></div>
+                        <div class="cta"><a href="<?php echo $template_fields['section_2_button_link']; ?>" aria-label="Leer mas acerca de nosotros"><?php echo $template_fields['section_2_button_text']; ?></a></div>
                     </div>
                 <?php } ?>
             </div>

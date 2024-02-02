@@ -28,7 +28,7 @@ if (!empty($template_fields['section_1_item'])) {
             if (!empty($template_fields['section_1_item'])) {
                 foreach ($template_fields['section_1_item'] as $section_1_item) {
                     $i++; ?>
-                    <a href="<?php echo $section_1_item['link']; ?>" class="w-10/12 md:w-[29%]">
+                    <a href="<?php echo $section_1_item['link']; ?>" class="w-10/12 md:w-[29%]" aria-label="Ir al servicio">
                         <div class="item_wrap w-full">
                             <div class="item_img_<?php echo $i; ?>">
                                 <div class="overlay"></div>

@@ -6,7 +6,7 @@
             $i++;
             if ($i % 2 == 0) {
                 ?>
-                <div class="w-full min-h-[550px] relative">
+                <div class="w-full min-h-[550px]">
                     <div class="container w-full h-full flex flex-wrap items-center pb-12">
                         <div class="w-full">
                             <div class="w-full pb-4">
@@ -30,7 +30,7 @@
                                 $k++;
                                 ?>
                                 <div class="w-full md:w-[29%] p-6 flex flex-col justify-center items-center gap-4">
-                                    <div class="pb-4 min-h-[90px] flex items-center"><i
+                                    <div class="pb-4 min-h-[75px] flex items-center"><i
                                             class="text-8xl md:text-7xl aspect-square <?php echo ($k % 2 == 0) ? 'text-tertiary-500 ' : 'text-secondary-500 '; ?><?php echo $item['item_icon']; ?>"></i>
                                     </div>
                                     <div class="pb-4 min-h-[30px] pt-2">
@@ -56,7 +56,7 @@
                 <?php
             } else {
                 ?>
-                <div class="w-full min-h-[550px] relative <?php echo ($i == 1) ? 'pt-24 pb-12' : 'py-12'; ?>">
+                <div class="w-full min-h-[550px] <?php echo ($i == 1) ? 'pt-24 pb-12' : 'py-12'; ?>">
                     <div class="container w-full h-full flex flex-wrap items-center pb-12">
                         <div class="w-full">
                             <div class="w-full pb-4">
@@ -80,7 +80,7 @@
                                 $k++;
                                 ?>
                                 <div class="w-full md:w-[29%] p-6 flex flex-col justify-center items-center">
-                                    <div class="pb-4 min-h-[90px] flex items-center"><i
+                                    <div class="pb-4 min-h-[75px] flex items-center"><i
                                             class="text-8xl md:text-7xl aspect-square <?php echo ($k % 2 == 0) ? 'text-tertiary-500 ' : 'text-secondary-500 '; ?><?php echo $item['item_icon']; ?>"></i>
                                     </div>
                                     <div class="pb-4 min-h-[30px] pt-2">

@@ -11,7 +11,9 @@ function openModal() {
     let data = $(this).data("dep");
     let lastDep = $("#form_section").data("last-dep");
     $("body").css("overflow-y", "hidden");
-    $("body").css("position", "fixed");
+    if (screen.width <= 480) {
+      $("body").css("position", "fixed");
+    }
     document.ontouchmove = function (event) {
       event.preventDefault();
     };
@@ -69,5 +71,4 @@ function closeModal() {
   $("#modalWindow").click(function (e) {
     e.stopPropagation();
   });
-  
 }

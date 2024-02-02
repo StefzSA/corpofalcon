@@ -17,7 +17,7 @@
                 <?php } ?>
                 <?php if(!empty($template_fields['hero_button_text'])) { ?>
                     <div class="cta dark-text w-full">
-                        <a href="<?php $template_fields['hero_button_link']; ?>"><?php echo $template_fields['hero_button_text']; ?></a>
+                        <a href="<?php echo $template_fields['hero_button_link']; ?>" aria-label="Contactanos"><?php echo $template_fields['hero_button_text']; ?></a>
                     </div>
                 <?php } ?>
             </div>

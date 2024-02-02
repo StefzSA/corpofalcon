@@ -27,7 +27,7 @@ function assets_load()
     wp_enqueue_style('Font Include', get_template_directory_uri() . '/resources/css/font-include.css');
 
     wp_deregister_script('jquery');
-    wp_enqueue_script('jQuery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js');
+    wp_enqueue_script('jQuery', get_template_directory_uri() . '/resources/js/jquery.min.js');
 
     wp_enqueue_script('modaljs', get_template_directory_uri() . '/resources/js/modal.js');
     wp_localize_script('modaljs', 'modal_ajax', array(

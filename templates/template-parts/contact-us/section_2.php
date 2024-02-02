@@ -13,7 +13,7 @@
                     <div class="w-full"><span class="text-tertiary-500 text-xl">Llámanos</span></div>
                     <div class="w-full pt-2"><a href="tel:<?php echo $card['card_phone'];?>">Tel: <?php echo $card['card_phone'];?></a></div>
                 </div>
-                <div class="w-full flex justify-center"><span class="text-tertiary-500 text-xl py-2">O</span></div>
+                <div class="w-full flex justify-center"><span class="text-tertiary-500 text-xl py-2">ó</span></div>
                 <button
                     class="open_modal flex px-4 justify-center text-white py-[10px] bg-secondary-500 rounded-md" data-dep="<?php echo $card['card_id'];?>">¡Escríbenos!</button>
             </div>
