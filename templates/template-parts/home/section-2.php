@@ -34,7 +34,7 @@
                 ?>
                 <?php if (!empty($template_fields['section_2_button_text'])) { ?>
                     <div class="w-full flex justify-center mt-8">
-                        <div class="cta"><a href="<?php echo $template_fields['section_2_button_link']; ?>" aria-label="Leer mas acerca de nosotros"><?php echo $template_fields['section_2_button_text']; ?></a></div>
+                        <div class="cta"><a href="<?php echo $template_fields['section_2_button_link']; ?>" aria-label="<?php echo $template_fields['section_2_button_text']; ?>"><?php echo $template_fields['section_2_button_text']; ?></a></div>
                     </div>
                 <?php } ?>
             </div>

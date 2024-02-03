@@ -1,14 +1,14 @@
 //Made by StefGSA.
-
+var $j = jQuery.noConflict();
 // Inicia el carrusel
-$(document).ready(function () {
-  const carousel = $("#testimonials");
+jQuery(document).ready(function () {
+  const carousel = jQuery("#testimonials");
   startCarousel(carousel, 5000);
 });
 
 function startCarousel(carouselName, interval) {
   carouselName.ready(function () {
-    $(carouselName).find(".carousel-item:not(.active)").hide();
+    jQuery(carouselName).find(".carousel-item:not(.active)").hide();
     assignData(carouselName);
     createDots(carouselName); //Crea los dos de control en el slider de manera dinámica
     startAutoplay(carouselName, interval); // Inicializa el autoplay
@@ -35,7 +35,7 @@ function stopAutoplay() {
 
 function autoplayController(carouselName, interval) {
   // Controla el autoplay al pasar el mouse por encima del carrusel
-  $(carouselName).hover(
+  jQuery(carouselName).hover(
     function () {
       stopAutoplay();
     },
@@ -48,51 +48,51 @@ function autoplayController(carouselName, interval) {
 }
 
 function createDots(carouselName) {
-  let items = $(carouselName).find(".carousel-item").length;
+  let items = jQuery(carouselName).find(".carousel-item").length;
   // Crea e inserta un dot por cada elemento
   for (let i = 0; i < items; i++) {
-    $(carouselName)
+    jQuery(carouselName)
       .find(".dots")
       .append("<div class='dot' data-index='" + i + "'></div>");
   }
-  $(carouselName).find(".dot").first().addClass("active");
-  $(carouselName).find(".dot").first().attr("disabled", true);
+  jQuery(carouselName).find(".dot").first().addClass("active");
+  jQuery(carouselName).find(".dot").first().attr("disabled", true);
 }
 
 function assignData(carouselName) {
   let i = 0;
-  $(".carousel").each(function () {
+  jQuery(".carousel").each(function () {
     let index = i++;
-    $(this).attr("data-carouselid", index);
+    jQuery(this).attr("data-carouselid", index);
   });
-  $(carouselName)
+  jQuery(carouselName)
     .find(".carousel-item")
     .each(function () {
-      let index = $(this).index();
-      $(this).attr("data-slideid", index);
+      let index = jQuery(this).index();
+      jQuery(this).attr("data-slideid", index);
     });
 }
 
 function dotsNavigation(carouselName, interval) {
   // Controla la navegación por dots
-  $(carouselName).find("div.dot").click(function () {
-      if (!$(this).attr("disabled") == true) {
+  jQuery(carouselName).find("div.dot").click(function () {
+      if (!jQuery(this).attr("disabled") == true) {
         stopAutoplay();
-        let currentDot = $(carouselName).find(".dot.active");
-        let index = $(this).data("index");
-        let currentSlide = $(carouselName).find(".carousel-item.active");
-        let nextSlide = $(carouselName).find(
+        let currentDot = jQuery(carouselName).find(".dot.active");
+        let index = jQuery(this).data("index");
+        let currentSlide = jQuery(carouselName).find(".carousel-item.active");
+        let nextSlide = jQuery(carouselName).find(
           ".carousel-item[data-slideid='" + index + "']"
         );
         currentSlide.removeClass("active").fadeOut(function () {
-          $(nextSlide).addClass("active").fadeIn();
+          jQuery(nextSlide).addClass("active").fadeIn();
         });
 
         // Actualiza el dot de navegación activo
         currentDot.removeClass("active");
         currentDot.attr("disabled", false);
-        $(this).addClass("active");
-        $(this).attr("disabled", true);
+        jQuery(this).addClass("active");
+        jQuery(this).attr("disabled", true);
 
         // Reinicia el intervalo con la nueva posición
         carouselName.addClass("paused");
@@ -103,22 +103,22 @@ function dotsNavigation(carouselName, interval) {
 
 // Función para cambiar a la siguiente slide
 function nextSlide(carouselName) {
-  let carousel = $(carouselName);
-  let currentSlide = $(carousel).find(".carousel-item.active");
+  let carousel = jQuery(carouselName);
+  let currentSlide = jQuery(carousel).find(".carousel-item.active");
   // console.log(currentSlide);
   currentSlide.removeClass("active").fadeOut(function () {
     let nextSlide = currentSlide.next(".carousel-item");
     if (nextSlide.length === 0) {
-      nextSlide = $(carousel).find(".carousel-item").first();
+      nextSlide = jQuery(carousel).find(".carousel-item").first();
     }
     nextSlide.addClass("active").fadeIn();
   });
 
   // Actualiza los puntos de navegación
-  let currentDot = $(carousel).find(".dot.active");
+  let currentDot = jQuery(carousel).find(".dot.active");
   let nextDot = currentDot.next(".dot");
   if (nextDot.length === 0) {
-    nextDot = $(carousel).find(".dot").first();
+    nextDot = jQuery(carousel).find(".dot").first();
   }
   currentDot.removeClass("active");
   currentDot.attr("disabled", false);

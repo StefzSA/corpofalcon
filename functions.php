@@ -23,13 +23,13 @@ if ($debug == 1) {
 function assets_load()
 {
     wp_enqueue_style('tailwind-css', get_template_directory_uri() . '/resources/css/tailwind/output.css');
-    wp_enqueue_style('fontawesome6', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+    wp_enqueue_style('fontawesome6', get_template_directory_uri() . '/resources/css/font-awesome/all/all.min.css');
     wp_enqueue_style('Font Include', get_template_directory_uri() . '/resources/css/font-include.css');
 
-    wp_deregister_script('jquery');
-    wp_enqueue_script('jQuery', get_template_directory_uri() . '/resources/js/jquery.min.js');
+    //wp_deregister_script('jquery');
+    //wp_enqueue_script('jQuery', get_template_directory_uri() . '/resources/js/jquery.min.js');
 
-    wp_enqueue_script('modaljs', get_template_directory_uri() . '/resources/js/modal.js');
+    wp_enqueue_script('modaljs', get_template_directory_uri() . '/resources/js/modal.js', array('jquery'));
     wp_localize_script('modaljs', 'modal_ajax', array(
         'ajax_url' => admin_url('admin-ajax.php'),
         'nonce' => wp_create_nonce('modalNonce'),
@@ -58,7 +58,7 @@ function plugins_setup()
 {
     plugin_activation('advanced-custom-fields-pro/acf.php');
     plugin_activation('advanced-custom-fields-font-awesome/acf-font-awesome.php');
-    plugin_activation('megamenu/megamenu.php');
+    //plugin_activation('megamenu/megamenu.php');
     plugin_activation('contact-form-7/wp-contact-form-7.php');
     plugin_activation('svg-support/svg-support.php');
     include_once(INCLUDES_DIR . '/inc.megamenu_themes.php');
