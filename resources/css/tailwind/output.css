@@ -1151,7 +1151,7 @@ body::-webkit-scrollbar {
 #header .logo > img {
   height: 100%;
   max-height: 45px;
-  min-height: 35px;
+  min-height: auto;
 }
 
 #header .logo_wrapper a {
@@ -2086,6 +2086,10 @@ body::-webkit-scrollbar {
 
   .md\:block {
     display: block;
+  }
+
+  .md\:flex {
+    display: flex;
   }
 
   .md\:hidden {
