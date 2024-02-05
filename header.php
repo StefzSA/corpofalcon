@@ -5,11 +5,11 @@
 
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<?php
 	wp_head();
 	$page_logo = get_field('logo', 'option');
 	?>
+	<meta http-equiv="Content-Security-Policy" content="frame-src 'self' https://www.google.com; script-src 'self' data:; object-src 'self';">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
 					<div class="logo">
 						<img width="100%" height="auto"
 							src="http://corpofalcon.local/wp-content/uploads/2024/01/logo_header-1-e1706108359631.webp"
-							alt="Logotipo de la compañía">
+							alt="Logotipo de CORPOFALCON">
 					</div>
 				</a>
 				<?php wp_nav_menu(array('theme_location' => 'max_mega_menu_1')); ?>

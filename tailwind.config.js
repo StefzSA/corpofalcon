@@ -10,11 +10,11 @@ module.exports = {
     extend: {},
     container: {
       padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
       },
       center: true,
     },
@@ -33,12 +33,30 @@ module.exports = {
         400: "#6aa0f8",
         500: "#4588f6",
       },
+      lightblue: {
+        100: "#e9f1fe",
+        200: "#d3e3fd",
+        300: "#bcd4fb",
+        400: "#a6c6fa",
+        500: "#90b8f9",
+      },
       tertiary: {
         100: "#e3f4d3",
         200: "#c7e9a7",
         300: "#abde7c",
         400: "#8fd350",
         500: "#73c824",
+      },
+      darkgreen: {
+        100: "#d9e4d1",
+        200: "#b4c9a3",
+        300: "#8ead74",
+        400: "#699246",
+        500: "#437718",
+        600: "#365f13",
+        700: "#28470e",
+        800: "#1b300a",
+        900: "#0d1805",
       },
       dark_component: {
         100: "#d4d4d4",
@@ -53,7 +71,7 @@ module.exports = {
     },
   },
   plugins: [
-    require('tailwindcss/nesting')(require('postcss-nesting')),
-    require('tailwindcss')
+    require("tailwindcss/nesting")(require("postcss-nesting")),
+    require("tailwindcss"),
   ],
 };

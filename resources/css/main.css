@@ -46,7 +46,7 @@ body::-webkit-scrollbar {
 }
 #header .logo > img {
   height: 100%;
-  @apply min-h-[auto] max-h-[45px];
+  @apply min-h-[auto] md:max-h-[45px];
 }
 
 #header .logo_wrapper a {

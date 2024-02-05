@@ -14,11 +14,13 @@ $page_logo = get_field('logo', 'option');
 					<div class="text-xl mb-4">
 						<h3>Contáctanos</h3>
 					</div>
-					<div class="text-dark_component-400"><a href="tel:"></a></div>
+					<?php
+					//<div class="text-dark_component-400"><a href="tel:"></a></div>
+					?>
 					<div class="w-8/12 text-secondary-500 mb-2">
 						<p>Impulsando el desarrollo de Falcon</p>
 					</div>
-					<div class="text-dark_component-500 mb-6"><a href="mailto:corpofalcon.informatica@gmail.com">corpofalcon.informatica@gmail.com</a></div>
+					<div class="text-dark_component-500 mb-6"><a href="mailto:corpofalcon.informatica@gmail.com" aria-label="Enviar correo al email de institución">corpofalcon.informatica@gmail.com</a></div>
 					<div class="text-secondary-500 text-2xl"><a href="https://instagram.com/corpofalcon"><i class="fa-brands fa-instagram"></i></a></div>
 				</div>
 			</div>
